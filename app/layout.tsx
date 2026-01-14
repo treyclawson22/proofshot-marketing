@@ -3,24 +3,67 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "ProofShot Pro - Document Your Work. Get Paid Faster.",
-  description: "The easiest way for contractors and service professionals to capture before & after photos, generate professional reports, and share proof of completed work with clients.",
-  keywords: ["contractor app", "before after photos", "job documentation", "service professionals", "photo reports", "proof of work"],
+  metadataBase: new URL("https://proofshotpro.com"),
+  title: "ProofShot Pro — Before & After Photo Documentation for Contractors",
+  description:
+    "Capture professional before & after photos, generate branded PDF reports, and create marketing content in seconds. Free for contractors.",
+  keywords: [
+    "before after photos",
+    "contractor documentation",
+    "PDF reports",
+    "job site photos",
+    "pressure washing",
+    "pest control",
+    "landscaping",
+    "HVAC",
+    "contractor app",
+    "proof of work",
+  ],
+  authors: [{ name: "ProofShot Pro" }],
+  creator: "ProofShot Pro",
+  publisher: "ProofShot Pro",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "ProofShot Pro - Document Your Work. Get Paid Faster.",
-    description: "The easiest way for contractors to capture before & after photos and share proof of completed work.",
     type: "website",
+    locale: "en_US",
     url: "https://proofshotpro.com",
+    siteName: "ProofShot Pro",
+    title: "ProofShot Pro — Document Your Work. Get Paid Faster.",
+    description:
+      "Before & after photos, branded PDF reports, and marketing content — all from your phone in 30 seconds.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ProofShot Pro - Before & After Photo Documentation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ProofShot Pro - Document Your Work. Get Paid Faster.",
-    description: "The easiest way for contractors to capture before & after photos and share proof of completed work.",
+    site: "@proofshotpro",
+    creator: "@proofshotpro",
+    title: "ProofShot Pro — Document Your Work. Get Paid Faster.",
+    description:
+      "Before & after photos, branded PDF reports, and marketing content — all from your phone in 30 seconds.",
+    images: ["/twitter-card.jpg"],
+  },
+  alternates: {
+    canonical: "https://proofshotpro.com",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -30,8 +73,58 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "ProofShot Pro",
+              description:
+                "Before & after photo documentation app for contractors",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "iOS, Android, Web",
+              offers: [
+                {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                  name: "Free",
+                  description: "5 projects per month",
+                },
+                {
+                  "@type": "Offer",
+                  price: "29.99",
+                  priceCurrency: "USD",
+                  name: "Pro Monthly",
+                  description: "Unlimited projects, team features",
+                },
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                ratingCount: "500",
+              },
+            }),
+          }}
+        />
+      </head>
+      <body className="font-sans antialiased">
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,57 +19,63 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-white/97 backdrop-blur-xl border-b border-gray-100'
+          : 'bg-white/97 backdrop-blur-xl border-b border-gray-100'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#0d479b] rounded-lg flex items-center justify-center">
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="currentColor">
-                <path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zm-9 9h7v7H4v-7zm9 0h7v7h-7v-7z" />
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-slate-900">
-              ProofShot<span className="text-[#0d479b]">Pro</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <svg
+              className="h-8 w-auto"
+              viewBox="0 0 434.38 81.73"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path fill="#333" d="M48.03,0c-1.12,0-2.13.46-2.86,1.19l-1.13,2.28-3.75,7.55H7.24c-3.99,0-7.24,3.24-7.24,7.24v9.04h37.2c5.86-7.16,14.68-11.8,24.6-12.05V0h-13.78ZM52.75,29.79c-6.5,3.52-10.91,10.39-10.91,18.3,0,11.2,8.86,20.34,19.96,20.77V27.31c-3.27.13-6.35,1.01-9.06,2.48ZM48.15,27.29c3.89-2.72,8.58-4.37,13.65-4.53v-5.16c-8.47.23-16.08,3.91-21.48,9.69-.74.79-1.44,1.63-2.09,2.5-3.83,5.1-6.09,11.43-6.09,18.3,0,16.56,13.2,30.04,29.66,30.48v-5.16c-13.61-.44-24.51-11.61-24.51-25.32,0-7.19,2.99-13.69,7.81-18.3.94-.91,1.96-1.74,3.04-2.5ZM29.78,48.09c0-6.77,2.05-13.07,5.56-18.3H0v44.7c0,4,3.25,7.24,7.24,7.24h54.56v-.81c-17.76-.44-32.02-14.98-32.02-32.84Z"/>
+              <path fill="#333" d="M16.18,5.18h8.48c1.76,0,3.18,1.42,3.18,3.18v1.32h-14.85v-1.32c0-1.76,1.42-3.18,3.18-3.18Z"/>
+              <path fill="#e97a35" d="M117.99,29.79v44.7c0,4-3.24,7.24-7.24,7.24h-47.29v-.81c15.27-.38,27.96-11.18,31.21-25.56h-2.42c-3.2,13.07-14.82,22.83-28.79,23.2v-5.16c12.43-.4,22.6-9.75,24.26-21.82h10.41v5.02l10.71-8.87-5.35-4.43-5.35-4.44v5.03h-10.52c-.91-5.51-3.6-10.41-7.46-14.1-.95-.91-1.96-1.74-3.04-2.5-3.89-2.72-8.58-4.37-13.65-4.53v-5.16c8.47.23,16.08,3.91,21.47,9.69.74.79,1.44,1.63,2.1,2.5,2.22,2.96,3.91,6.33,4.95,9.98h2.44c-.94-3.61-2.48-6.97-4.5-9.98h28.07Z"/>
+              <path fill="#e97a35" d="M110.75,11.02h-26.4l-3.75-7.55-1.13-2.28c-.73-.73-1.75-1.19-2.86-1.19h-13.15v15.24c9.92.25,18.74,4.89,24.61,12.05h29.92v-9.04c0-4-3.24-7.24-7.24-7.24ZM110.1,22.36c0,.42-.35.76-.76.76h-12c-.42,0-.77-.34-.77-.76v-5.36c0-.42.35-.77.77-.77h12c.42,0,.76.34.76.77v5.36Z"/>
+              <path fill="#333" d="M153.33,35.35c-2.02-1.58-4.92-2.38-8.73-2.38h-11l-5.22,29.52h9.59l1.76-9.62h2.83c2.17,0,4.1-.22,5.8-.65,1.7-.42,3.14-1.09,4.33-1.98,1.19-.89,2.11-2.03,2.73-3.42.62-1.39.94-3.03.94-4.92,0-2.78-1.01-4.95-3.03-6.55ZM145.64,44.94c-.75.45-1.8.67-3.13.67h-1.54l.91-5.09h1.46c1.05,0,1.89.16,2.5.5.61.33.92.95.92,1.84,0,.95-.38,1.64-1.13,2.08Z"/>
+              <path fill="#333" d="M182.89,47.19c1.16-1.58,1.73-3.6,1.73-6.05,0-1.31-.24-2.47-.73-3.48-.49-1.01-1.19-1.87-2.11-2.56-.91-.69-2.03-1.22-3.34-1.58-1.31-.36-2.76-.55-4.38-.55h-12.13l-5.22,29.52h9.3l1.84-10.79h1.17l4.05,10.79h10.83l-5.75-12.05c2-.58,3.58-1.67,4.73-3.25ZM173.95,44.93c-.73.42-1.72.64-3,.64h-1.92l.87-4.96h1.8c1.03,0,1.84.16,2.44.48s.9.91.9,1.77c0,.95-.37,1.63-1.09,2.07Z"/>
+              <path fill="#333" d="M218.72,40.23c-.64-1.64-1.58-3.06-2.82-4.25-1.23-1.19-2.77-2.11-4.58-2.78-1.83-.64-3.93-.98-6.32-.98-2.7,0-5.15.47-7.36,1.38-2.2.91-4.09,2.17-5.65,3.75-1.55,1.58-2.77,3.44-3.62,5.58-.87,2.14-1.29,4.43-1.29,6.88,0,1.98.32,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.23,1.19,2.77,2.11,4.59,2.77,1.82.65,3.91.98,6.27.98,2.73,0,5.19-.46,7.4-1.37,2.21-.92,4.1-2.17,5.67-3.76,1.58-1.58,2.78-3.44,3.63-5.58.85-2.14,1.27-4.43,1.27-6.88,0-1.98-.33-3.78-.96-5.42ZM209.13,49.37c-.33.97-.8,1.83-1.41,2.58s-1.35,1.35-2.21,1.8c-.87.44-1.84.67-2.91.67-.89,0-1.68-.14-2.36-.42-.69-.28-1.25-.65-1.71-1.14-.47-.48-.81-1.05-1.04-1.71-.24-.65-.36-1.36-.36-2.11,0-1,.17-1.99.51-2.96.33-.97.8-1.84,1.41-2.59s1.36-1.36,2.24-1.81c.87-.46,1.85-.69,2.94-.69.86,0,1.63.14,2.31.42.69.28,1.25.66,1.71,1.15.46.48.8,1.05,1.04,1.71s.36,1.36.36,2.11c0,1.03-.17,2.02-.51,3Z"/>
+              <path fill="#333" d="M253.45,40.23c-.64-1.64-1.58-3.06-2.81-4.25-1.24-1.19-2.77-2.11-4.59-2.78-1.82-.64-3.93-.98-6.32-.98-2.69,0-5.15.47-7.35,1.38-2.21.91-4.1,2.17-5.65,3.75-1.56,1.58-2.77,3.44-3.63,5.58-.86,2.14-1.29,4.43-1.29,6.88,0,1.98.32,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.24,1.19,2.77,2.11,4.59,2.77,1.82.65,3.91.98,6.28.98,2.72,0,5.18-.46,7.4-1.37,2.21-.92,4.1-2.17,5.67-3.76,1.57-1.58,2.78-3.44,3.62-5.58.85-2.14,1.27-4.43,1.27-6.88,0-1.98-.32-3.78-.96-5.42ZM243.87,49.37c-.33.97-.81,1.83-1.42,2.58s-1.35,1.35-2.21,1.8c-.86.44-1.83.67-2.91.67-.89,0-1.67-.14-2.36-.42-.68-.28-1.25-.65-1.71-1.14-.46-.48-.81-1.05-1.04-1.71-.24-.65-.35-1.36-.35-2.11,0-1,.16-1.99.5-2.96.33-.97.81-1.84,1.42-2.59s1.36-1.36,2.23-1.81c.87-.46,1.85-.69,2.94-.69.87,0,1.63.14,2.32.42.68.28,1.25.66,1.71,1.15.46.48.81,1.05,1.04,1.71.24.65.35,1.36.35,2.11,0,1.03-.16,2.02-.5,3Z"/>
+              <path fill="#333" d="M278.34,41.11l1.42-8.13h-19.01l-5.21,29.52h9.46l1.8-10.17h9.04l1.38-7.84h-9.09l.63-3.38h9.58Z"/>
+              <path fill="#e97a35" d="M300.24,47.45c-.69-.69-1.54-1.31-2.54-1.84-1-.53-2.13-1-3.4-1.42-1.02-.33-1.8-.65-2.33-.96-.52-.31-.79-.73-.79-1.3,0-.69.32-1.21.94-1.54.63-.33,1.33-.5,2.11-.5,1,0,1.88.18,2.63.52.75.35,1.36.8,1.84,1.36l6.17-5.96c-.53-.56-1.18-1.06-1.96-1.5-.78-.45-1.63-.83-2.55-1.15s-1.89-.56-2.91-.75c-1.03-.18-2.07-.27-3.13-.27-1.92,0-3.68.27-5.28.82-1.59.54-2.97,1.29-4.12,2.25-1.16.96-2.04,2.09-2.67,3.4-.63,1.31-.94,2.73-.94,4.25,0,1.25.2,2.31.59,3.19.38.87.92,1.62,1.6,2.24.69.63,1.49,1.16,2.42,1.61.93.44,1.93.83,2.99,1.17,1.33.42,2.24.82,2.73,1.21.49.39.73.83.73,1.34,0,.6-.29,1.08-.87,1.4-.58.32-1.36.47-2.33.47-.44,0-.93-.06-1.46-.19-.52-.12-1.04-.29-1.56-.5-.51-.2-1.01-.47-1.48-.77-.47-.31-.88-.65-1.22-1.04l-6.58,6.09c.69.66,1.51,1.27,2.46,1.79.95.53,1.95.97,3.02,1.34,1.07.36,2.19.64,3.36.83,1.17.2,2.33.29,3.5.29,1.48,0,2.99-.2,4.54-.59,1.55-.39,2.97-1,4.26-1.84,1.28-.83,2.34-1.92,3.18-3.25.82-1.34,1.24-2.95,1.24-4.84,0-1.11-.19-2.11-.56-3-.38-.89-.91-1.68-1.6-2.38Z"/>
+              <path fill="#e97a35" d="M327.54,32.97l-1.8,10.13h-8.42l1.79-10.13h-9.58l-5.22,29.52h9.63l2-11.34h8.42l-2,11.34h9.63l5.21-29.52h-9.67Z"/>
+              <path fill="#e97a35" d="M370.23,40.23c-.64-1.64-1.58-3.06-2.82-4.25-1.23-1.19-2.77-2.11-4.59-2.78-1.82-.64-3.93-.98-6.31-.98-2.7,0-5.15.47-7.36,1.38-2.21.91-4.09,2.17-5.65,3.75-1.56,1.58-2.77,3.44-3.62,5.58-.87,2.14-1.3,4.43-1.3,6.88,0,1.98.33,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.23,1.19,2.76,2.11,4.58,2.77s3.92.98,6.28.98c2.73,0,5.19-.46,7.4-1.37,2.2-.92,4.1-2.17,5.67-3.76,1.58-1.58,2.78-3.44,3.63-5.58.84-2.14,1.27-4.43,1.27-6.88,0-1.98-.32-3.78-.96-5.42ZM360.64,49.37c-.33.97-.81,1.83-1.41,2.58-.61.75-1.36,1.35-2.21,1.8-.87.44-1.84.67-2.92.67-.89,0-1.67-.14-2.35-.42-.69-.28-1.25-.65-1.71-1.14-.46-.48-.8-1.05-1.04-1.71-.24-.65-.36-1.36-.36-2.11,0-1,.17-1.99.51-2.96.33-.97.8-1.84,1.41-2.59s1.36-1.36,2.23-1.81c.88-.46,1.86-.69,2.95-.69.86,0,1.63.14,2.31.42.68.28,1.25.66,1.71,1.15.47.48.81,1.05,1.04,1.71.24.65.36,1.36.36,2.11,0,1.03-.17,2.02-.51,3Z"/>
+              <path fill="#e97a35" d="M373.69,32.97l-1.46,8.13h7.46l-3.75,21.39h9.67l3.75-21.39h7.22l1.46-8.13h-24.35Z"/>
+            </svg>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             <Link
               href="#features"
-              className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              className="text-gray-600 hover:text-gray-900 font-medium transition-colors text-[0.95rem]"
             >
               Features
             </Link>
             <Link
               href="#pricing"
-              className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              className="text-gray-600 hover:text-gray-900 font-medium transition-colors text-[0.95rem]"
             >
               Pricing
             </Link>
             <Link
               href="#faq"
-              className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
+              className="text-gray-600 hover:text-gray-900 font-medium transition-colors text-[0.95rem]"
             >
               FAQ
             </Link>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="https://app.proofshotpro.com/login"
-              className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
-            >
-              Sign In
-            </Link>
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="https://app.proofshotpro.com/signup"
-              className="bg-[#0d479b] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#0a3a7d] transition-colors"
+              className="bg-orange text-white px-6 py-2.5 rounded-full font-semibold text-[0.95rem] hover:bg-orange-hover transition-all hover:-translate-y-0.5"
             >
               Get Started Free
             </Link>
@@ -79,48 +84,51 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-600"
+            className="lg:hidden p-2 text-gray-600"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-200">
+        <div className="lg:hidden bg-white border-t border-gray-100">
           <div className="px-4 py-4 space-y-4">
             <Link
               href="#features"
-              className="block text-slate-600 font-medium"
+              className="block text-gray-600 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
             </Link>
             <Link
               href="#pricing"
-              className="block text-slate-600 font-medium"
+              className="block text-gray-600 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pricing
             </Link>
             <Link
               href="#faq"
-              className="block text-slate-600 font-medium"
+              className="block text-gray-600 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </Link>
-            <hr className="border-slate-200" />
-            <Link
-              href="https://app.proofshotpro.com/login"
-              className="block text-slate-600 font-medium"
-            >
-              Sign In
-            </Link>
+            <hr className="border-gray-200" />
             <Link
               href="https://app.proofshotpro.com/signup"
-              className="block bg-[#0d479b] text-white px-5 py-3 rounded-lg font-semibold text-center"
+              className="block bg-orange text-white px-5 py-3 rounded-full font-semibold text-center"
             >
               Get Started Free
             </Link>

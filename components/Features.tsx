@@ -1,123 +1,127 @@
-import { Check } from 'lucide-react';
-
-const features = [
+const showcases = [
   {
-    title: 'Capture Before & After in Seconds',
-    description:
-      'Open the app, snap your before photo, complete the job, then capture the after. ProofShot automatically organizes everything into a professional comparison.',
-    points: [
+    title: 'SNAP YOUR BEFORE & AFTER',
+    description: 'Open the app, capture your before shot, do the job, then snap the after. ProofShot automatically organizes everything into a professional side-by-side comparison.',
+    features: [
       'Side-by-side photo comparisons',
       'Add job details and notes',
       'GPS location and timestamp',
       'Works offline in the field',
     ],
-    imageSide: 'right',
+    reverse: false,
+    bgClass: '',
   },
   {
-    title: 'Generate Professional Reports',
-    description:
-      'Turn your project photos into polished PDF reports with your company branding. Perfect for client records, invoicing, and dispute protection.',
-    points: [
+    title: 'GENERATE PRO REPORTS',
+    description: 'Turn your project photos into polished PDF reports with your company branding. Perfect for client records, invoicing, and dispute protection.',
+    features: [
       'Your logo and company info',
       'Customizable templates',
       'Job details and descriptions',
       'AI-powered captions (Pro)',
     ],
-    imageSide: 'left',
+    reverse: true,
+    bgClass: 'bg-gray-50',
   },
   {
-    title: 'Share with Clients Instantly',
-    description:
-      'Send professional reports to clients with one tap. They can view on any device without downloading an app. Build trust and get paid faster.',
-    points: [
+    title: 'SHARE & GET PAID',
+    description: 'Send professional reports to clients with one tap. They can view on any device without downloading an app. Build trust and get paid faster.',
+    features: [
       'Email or shareable link',
       'No app required to view',
       'Track when reports are viewed',
       'Download as PDF anytime',
     ],
-    imageSide: 'right',
+    reverse: false,
+    bgClass: '',
   },
 ];
 
-export function Features() {
+function PhoneMockup({ variant }: { variant: 'capture' | 'report' | 'share' }) {
   return (
-    <section id="features" className="py-16 lg:py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            How ProofShot Pro Works
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            A simple workflow that fits naturally into how you already work.
-          </p>
-        </div>
-
-        <div className="space-y-16 lg:space-y-24">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className={`lg:grid lg:grid-cols-2 lg:gap-16 items-center ${
-                feature.imageSide === 'left' ? 'lg:grid-flow-dense' : ''
-              }`}
-            >
-              {/* Content */}
-              <div
-                className={`mb-8 lg:mb-0 ${
-                  feature.imageSide === 'left' ? 'lg:col-start-2' : ''
-                }`}
-              >
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#0d479b] text-white font-bold text-lg mb-4">
-                  {index + 1}
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-lg text-slate-600 mb-6">{feature.description}</p>
-                <ul className="space-y-3">
-                  {feature.points.map((point, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                        <Check className="w-3 h-3 text-green-600" />
-                      </div>
-                      <span className="text-slate-700">{point}</span>
-                    </li>
-                  ))}
-                </ul>
+    <div className="w-[260px] h-[540px] bg-black rounded-[40px] p-2.5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)]">
+      <div className="w-full h-full bg-gradient-to-b from-gray-800 to-gray-900 rounded-[32px] flex flex-col items-center justify-center text-gray-400 text-sm text-center p-8">
+        {variant === 'capture' && (
+          <div className="space-y-4 w-full">
+            <div className="flex gap-2">
+              <div className="flex-1 aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl flex items-center justify-center">
+                <span className="text-xs text-white/60 font-medium">Before</span>
               </div>
-
-              {/* Image placeholder */}
-              <div
-                className={`${
-                  feature.imageSide === 'left' ? 'lg:col-start-1 lg:row-start-1' : ''
-                }`}
-              >
-                <div className="bg-white rounded-2xl shadow-xl p-4 lg:p-6">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-[#0d479b]/10 rounded-2xl flex items-center justify-center">
-                        <svg
-                          className="w-8 h-8 text-[#0d479b]"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-sm text-slate-500">Feature Screenshot</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex-1 aspect-square bg-gradient-to-br from-green to-green-dark rounded-xl flex items-center justify-center">
+                <span className="text-xs text-white/80 font-medium">After</span>
               </div>
             </div>
-          ))}
-        </div>
+            <div className="bg-orange py-3 rounded-xl text-white font-bold text-sm">
+              Capture Photo
+            </div>
+          </div>
+        )}
+        {variant === 'report' && (
+          <div className="bg-white rounded-xl p-4 w-full shadow-lg">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 bg-orange rounded" />
+              <div className="flex-1 h-3 bg-gray-200 rounded" />
+            </div>
+            <div className="h-24 bg-gradient-to-r from-gray-200 to-green-dark rounded-lg mb-3" />
+            <div className="space-y-2">
+              <div className="h-2 bg-gray-100 rounded" />
+              <div className="h-2 bg-gray-100 rounded w-4/5" />
+              <div className="h-2 bg-gray-100 rounded w-3/5" />
+            </div>
+          </div>
+        )}
+        {variant === 'share' && (
+          <div className="space-y-4 w-full">
+            <div className="h-32 bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl flex items-center justify-center">
+              <span className="text-white/60 text-xs">Report Preview</span>
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="bg-blue py-3 rounded-xl text-white text-xs font-semibold">Email</div>
+              <div className="bg-green py-3 rounded-xl text-white text-xs font-semibold">Text</div>
+              <div className="bg-red py-3 rounded-xl text-white text-xs font-semibold">Social</div>
+            </div>
+          </div>
+        )}
       </div>
+    </div>
+  );
+}
+
+export function Features() {
+  const variants: ('capture' | 'report' | 'share')[] = ['capture', 'report', 'share'];
+
+  return (
+    <section>
+      {showcases.map((showcase, index) => (
+        <div key={index} className={`py-20 px-4 lg:px-8 ${showcase.bgClass}`}>
+          <div className={`max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${showcase.reverse ? 'lg:[direction:rtl]' : ''}`}>
+            {/* Text Content */}
+            <div className={showcase.reverse ? 'lg:[direction:ltr]' : ''}>
+              <h2 className="font-display font-extrabold text-[clamp(1.75rem,3.5vw,2.25rem)] text-gray-900 tracking-[-0.02em] uppercase mb-5">
+                {showcase.title}
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                {showcase.description}
+              </p>
+              <ul className="space-y-3">
+                {showcase.features.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                    <svg className="w-5 h-5 text-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Phone Visual */}
+            <div className={`flex justify-center ${showcase.reverse ? 'lg:[direction:ltr]' : ''}`}>
+              <PhoneMockup variant={variants[index]} />
+            </div>
+          </div>
+        </div>
+      ))}
     </section>
   );
 }
