@@ -7,7 +7,7 @@ const plans = [
     name: "Free",
     price: "$0",
     period: "/month",
-    description: "5 projects/month",
+    description: "Perfect for light users",
     features: ["5 projects per month", "10 stored projects", "All templates", "AI-powered captions"],
   },
   {
