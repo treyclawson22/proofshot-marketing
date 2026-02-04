@@ -74,9 +74,9 @@ const addons = [
   },
   {
     name: "Additional storage",
-    price: "$4.99",
+    price: "$1.99",
     period: "month",
-    description: "Per 50 additional projects",
+    description: "Per 100 additional projects",
   },
 ];
 
