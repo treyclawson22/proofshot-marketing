@@ -36,7 +36,7 @@ const plans = [
     ],
   },
   {
-    name: "Pro",
+    name: "Pro Monthly",
     price: "$29.99",
     period: "/month",
     description: "For professionals who need more",
@@ -50,16 +50,16 @@ const plans = [
     ],
   },
   {
-    name: "Annual",
-    price: "$249.99",
-    period: "/year",
-    description: "Everything in Pro, billed yearly",
-    effectivePrice: "$20.83/mo",
+    name: "Pro Annual",
+    price: "$20.83",
+    period: "/month",
+    billedAs: "$249.99/year",
+    description: "Same as Pro, save 30%",
     features: [
       "Everything in Pro",
       "30% savings vs monthly",
       "Rate locked for life",
-      "Annual billing",
+      "Billed annually",
     ],
   },
 ];
@@ -128,7 +128,7 @@ export default function PricingPage() {
                   </h2>
 
                   {/* Price */}
-                  <div className="mb-2">
+                  <div className="mb-1">
                     <span className="font-display font-black text-4xl lg:text-5xl text-black">
                       {plan.price}
                     </span>
@@ -137,10 +137,10 @@ export default function PricingPage() {
                     )}
                   </div>
 
-                  {/* Effective Price (for Annual) */}
-                  {plan.effectivePrice && (
+                  {/* Billed As (for Annual) */}
+                  {plan.billedAs && (
                     <p className="text-sm text-green font-medium mb-2">
-                      {plan.effectivePrice} effective
+                      {plan.billedAs}
                     </p>
                   )}
 
@@ -148,7 +148,7 @@ export default function PricingPage() {
                   <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
 
                   {/* Features */}
-                  <ul className="space-y-3 mb-8 flex-grow">
+                  <ul className="space-y-3 flex-grow">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
@@ -159,18 +159,16 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-
-                  {/* CTA */}
-                  <Button
-                    href="https://app.proofshotpro.com/signup"
-                    variant="primary"
-                    className="w-full"
-                    size="small"
-                  >
-                    Claim My Free Account
-                  </Button>
                 </div>
               ))}
+            </div>
+
+            {/* Single CTA */}
+            <div className="text-center mt-10">
+              <Button href="https://app.proofshotpro.com/signup" showArrow>
+                Claim My Free Account
+              </Button>
+              <p className="text-sm text-gray-500 mt-3">No credit card required</p>
             </div>
           </div>
         </section>

@@ -11,7 +11,7 @@ const plans = [
     features: ["5 projects per month", "10 stored projects", "All 4 templates"],
   },
   {
-    name: "Pro",
+    name: "Pro Monthly",
     price: "$29.99",
     period: "/month",
     description: "Unlimited projects",
@@ -20,6 +20,18 @@ const plans = [
       "3 team members",
       "AI captions",
       "Remove branding",
+    ],
+  },
+  {
+    name: "Pro Annual",
+    price: "$20.83",
+    period: "/month",
+    billedAs: "$249.99/year",
+    description: "Save 30%",
+    features: [
+      "Everything in Pro",
+      "30% savings",
+      "Rate locked for life",
     ],
   },
 ];
@@ -39,7 +51,7 @@ export function PricingPreview() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -51,7 +63,7 @@ export function PricingPreview() {
               </h3>
 
               {/* Price */}
-              <div className="mb-4">
+              <div className="mb-1">
                 <span className="font-display font-black text-4xl text-black">
                   {plan.price}
                 </span>
@@ -60,11 +72,18 @@ export function PricingPreview() {
                 )}
               </div>
 
+              {/* Billed As (for Annual) */}
+              {plan.billedAs && (
+                <p className="text-sm text-green font-medium mb-2">
+                  {plan.billedAs}
+                </p>
+              )}
+
               {/* Description */}
               <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
 
               {/* Features */}
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3">
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
@@ -75,22 +94,20 @@ export function PricingPreview() {
                   </li>
                 ))}
               </ul>
-
-              {/* CTA */}
-              <Button
-                href="https://app.proofshotpro.com/signup"
-                variant="primary"
-                className="w-full"
-                size="small"
-              >
-                Claim My Free Account
-              </Button>
             </div>
           ))}
         </div>
 
+        {/* Single CTA */}
+        <div className="text-center mt-10">
+          <Button href="https://app.proofshotpro.com/signup" showArrow>
+            Claim My Free Account
+          </Button>
+          <p className="text-sm text-gray-500 mt-3">No credit card required</p>
+        </div>
+
         {/* See Full Pricing Link */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-6">
           <Link
             href="/pricing"
             className="text-orange hover:text-orange-hover font-medium transition-colors"
