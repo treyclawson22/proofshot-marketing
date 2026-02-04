@@ -8,7 +8,7 @@ const plans = [
     price: "$0",
     period: "/month",
     description: "5 projects/month",
-    features: ["5 projects per month", "10 stored projects", "All 4 templates"],
+    features: ["5 projects per month", "10 stored projects", "All templates", "AI-powered captions"],
   },
   {
     name: "Pro Monthly",
@@ -18,8 +18,8 @@ const plans = [
     features: [
       "Unlimited projects",
       "3 team members",
-      "AI captions",
       "Remove branding",
+      "Priority support",
     ],
   },
   {
