@@ -309,13 +309,10 @@ export default function FeaturesPage() {
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-              <Button href="https://app.proofshotpro.com/signup" variant="outline">
-                Get Started Free
-              </Button>
-              <Button href="https://app.proofshotpro.com/signup?plan=pro" showArrow>
-                Start Pro Trial
+            {/* CTA Button */}
+            <div className="flex justify-center mt-10">
+              <Button href="https://app.proofshotpro.com/signup" showArrow>
+                Claim My Free Account
               </Button>
             </div>
           </div>
@@ -331,7 +328,7 @@ export default function FeaturesPage() {
               Join contractors who combine, brand, and share in 30 seconds.
             </p>
             <Button href="https://app.proofshotpro.com/signup" showArrow>
-              Get Started Free
+              Claim My Free Account
             </Button>
             <p className="text-sm text-gray-500 mt-4">No credit card required</p>
           </div>

@@ -273,7 +273,7 @@ export default function CompanyCamComparisonPage() {
               Try ProofShot Pro free and decide which works best for your business.
             </p>
             <Button href="https://app.proofshotpro.com/signup" showArrow>
-              Start Free Trial
+              Claim My Free Account
             </Button>
             <p className="text-sm text-gray-500 mt-4">No credit card required</p>
           </div>

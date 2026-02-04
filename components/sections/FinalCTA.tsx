@@ -11,7 +11,7 @@ export function FinalCTA() {
           Join contractors who document smarter, not harder.
         </p>
         <Button href="https://app.proofshotpro.com/signup" showArrow>
-          Get Started Free
+          Claim My Free Account
         </Button>
         <p className="text-sm text-gray-500 mt-4">No credit card required</p>
       </div>

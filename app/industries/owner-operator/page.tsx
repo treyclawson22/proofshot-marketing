@@ -142,7 +142,7 @@ export default function OwnerOperatorPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="https://app.proofshotpro.com/signup" showArrow>
-                Start Free — No Card Required
+                Claim My Free Account
               </Button>
               <Button href="/pricing" variant="outline">
                 See Pricing
@@ -312,7 +312,7 @@ export default function OwnerOperatorPage() {
                 One avoided dispute or one new customer pays for a <em>year</em> of ProofShot Pro.
               </p>
               <Button href="https://app.proofshotpro.com/signup" showArrow>
-                Start Free Today
+                Claim My Free Account
               </Button>
             </div>
           </div>
@@ -383,7 +383,7 @@ export default function OwnerOperatorPage() {
               Start free. Upgrade when you&apos;re ready. No credit card required.
             </p>
             <Button href="https://app.proofshotpro.com/signup" showArrow>
-              Get Started Free
+              Claim My Free Account
             </Button>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "../ui";
 import Link from "next/link";
 
@@ -9,9 +9,6 @@ const plans = [
     period: "/month",
     description: "5 projects/month",
     features: ["5 projects per month", "10 stored projects", "All 4 templates"],
-    cta: "Get Started",
-    ctaVariant: "secondary" as const,
-    featured: false,
   },
   {
     name: "Pro",
@@ -24,10 +21,6 @@ const plans = [
       "AI captions",
       "Remove branding",
     ],
-    cta: "Start Free Trial",
-    ctaVariant: "primary" as const,
-    featured: true,
-    badge: "Most Popular",
   },
 ];
 
@@ -46,26 +39,12 @@ export function PricingPreview() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-2xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative bg-white rounded-2xl p-8 ${
-                plan.featured
-                  ? "border-2 border-orange shadow-lg scale-105 z-10"
-                  : "border border-gray-200"
-              }`}
+              className="relative bg-white rounded-2xl p-8 border border-gray-200"
             >
-              {/* Badge */}
-              {plan.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-1 bg-orange text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                    <Star className="w-3 h-3 fill-current" />
-                    {plan.badge}
-                  </div>
-                </div>
-              )}
-
               {/* Plan Name */}
               <h3 className="font-display font-bold text-lg text-gray-900 mb-2">
                 {plan.name}
@@ -100,11 +79,11 @@ export function PricingPreview() {
               {/* CTA */}
               <Button
                 href="https://app.proofshotpro.com/signup"
-                variant={plan.ctaVariant}
+                variant="primary"
                 className="w-full"
                 size="small"
               >
-                {plan.cta}
+                Claim My Free Account
               </Button>
             </div>
           ))}

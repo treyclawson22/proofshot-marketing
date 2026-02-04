@@ -187,7 +187,7 @@ export function Navigation() {
                 size="small"
                 showArrow
               >
-                Get Started Free
+                Claim My Free Account
               </Button>
             </div>
 

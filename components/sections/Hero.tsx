@@ -37,7 +37,7 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button href="https://app.proofshotpro.com/signup" showArrow>
-                Get Started Free
+                Claim My Free Account
               </Button>
               <Button href="#features" variant="secondary">
                 See How It Works

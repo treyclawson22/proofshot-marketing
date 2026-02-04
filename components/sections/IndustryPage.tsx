@@ -37,7 +37,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
               {industry.tagline}
             </p>
             <Button href="https://app.proofshotpro.com/signup" showArrow>
-              Get Started Free
+              Claim My Free Account
             </Button>
             <p className="text-sm text-gray-500 mt-4">
               No credit card required
@@ -203,7 +203,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
               Join {industry.name.toLowerCase()} professionals who document smarter, not harder.
             </p>
             <Button href="https://app.proofshotpro.com/signup" showArrow>
-              Get Started Free
+              Claim My Free Account
             </Button>
             <p className="text-sm text-gray-500 mt-4">No credit card required</p>
           </div>

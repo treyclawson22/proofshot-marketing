@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
-import { Check, Star, Shield } from "lucide-react";
+import { Check, Shield } from "lucide-react";
 import type { Metadata } from "next";
 import { PricingFAQ } from "./pricing-faq";
 
@@ -34,9 +34,6 @@ const plans = [
       "PDF reports",
       "ProofShot branding",
     ],
-    cta: "Get Started",
-    ctaVariant: "outline" as const,
-    featured: false,
   },
   {
     name: "Pro",
@@ -51,10 +48,6 @@ const plans = [
       "AI-powered captions",
       "Priority support",
     ],
-    cta: "Start Free Trial",
-    ctaVariant: "primary" as const,
-    featured: true,
-    badge: "Most Popular",
   },
   {
     name: "Annual",
@@ -68,10 +61,6 @@ const plans = [
       "Rate locked for life",
       "Annual billing",
     ],
-    cta: "Start Free Trial",
-    ctaVariant: "outline" as const,
-    featured: false,
-    badge: "Save 30%",
   },
 ];
 
@@ -131,32 +120,10 @@ export default function PricingPage() {
               {plans.map((plan) => (
                 <div
                   key={plan.name}
-                  className={`relative bg-white rounded-2xl p-6 lg:p-8 flex flex-col ${
-                    plan.featured
-                      ? "border-2 border-orange shadow-lg lg:scale-105 z-10"
-                      : "border border-gray-200"
-                  }`}
+                  className="relative bg-white rounded-2xl p-6 lg:p-8 flex flex-col border border-gray-200"
                 >
-                  {/* Badge */}
-                  {plan.badge && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <div
-                        className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase whitespace-nowrap ${
-                          plan.featured
-                            ? "bg-orange text-white"
-                            : "bg-gray-900 text-white"
-                        }`}
-                      >
-                        {plan.featured && (
-                          <Star className="w-3 h-3 fill-current" />
-                        )}
-                        {plan.badge}
-                      </div>
-                    </div>
-                  )}
-
                   {/* Plan Name */}
-                  <h2 className="font-display font-bold text-xl text-gray-900 mb-2 mt-2">
+                  <h2 className="font-display font-bold text-xl text-gray-900 mb-2">
                     {plan.name}
                   </h2>
 
@@ -196,11 +163,11 @@ export default function PricingPage() {
                   {/* CTA */}
                   <Button
                     href="https://app.proofshotpro.com/signup"
-                    variant={plan.ctaVariant}
+                    variant="primary"
                     className="w-full"
                     size="small"
                   >
-                    {plan.cta}
+                    Claim My Free Account
                   </Button>
                 </div>
               ))}
@@ -266,7 +233,7 @@ export default function PricingPage() {
               Start free. No credit card required.
             </p>
             <Button href="https://app.proofshotpro.com/signup" showArrow>
-              Get Started Free
+              Claim My Free Account
             </Button>
           </div>
         </section>
