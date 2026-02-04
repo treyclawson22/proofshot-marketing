@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react";
 
 const pricingFaqs = [
   {
-    question: "Is there a free trial?",
+    question: "Is there a free plan?",
     answer:
-      "Yes! Try Pro free for 14 days. No credit card required. You'll have full access to all Pro features during the trial.",
+      "Yes! Our Free tier gives you full access to core features including AI-powered captions, all templates, and PDF reports. Use it as long as you want — no credit card required, no time limits.",
   },
   {
     question: "What happens when I hit my project limit?",

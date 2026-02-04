@@ -29,9 +29,9 @@ const faqs = [
       'Pro subscribers can remove ProofShot branding and add their own company logo, business name, and contact info to all reports. Your reports look 100% professional and branded to your business.',
   },
   {
-    question: 'Is there a free trial?',
+    question: 'Is there a free plan?',
     answer:
-      'Yes! New users can try Pro features free for 14 days. After that, you can continue with our Free plan or upgrade to Pro. No credit card required to start.',
+      'Yes! Our Free tier gives you full access to core features including AI-powered captions, all templates, and PDF reports — forever. Upgrade to Pro when you need unlimited projects, team members, or want to remove ProofShot branding.',
   },
 ];
 
