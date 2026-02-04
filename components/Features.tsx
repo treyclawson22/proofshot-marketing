@@ -1,7 +1,7 @@
 const showcases = [
   {
-    title: 'SNAP YOUR BEFORE & AFTER',
-    description: 'Open the app, capture your before shot, do the job, then snap the after. ProofShot automatically organizes everything into a professional side-by-side comparison.',
+    title: 'ADD YOUR BEFORE & AFTER',
+    description: 'Add your before photo, do the job, then add the after. ProofShot automatically combines them into a professional side-by-side comparison with your branding.',
     features: [
       'Side-by-side photo comparisons',
       'Add job details and notes',
@@ -52,7 +52,7 @@ function PhoneMockup({ variant }: { variant: 'capture' | 'report' | 'share' }) {
               </div>
             </div>
             <div className="bg-orange py-3 rounded-xl text-white font-bold text-sm">
-              Capture Photo
+              Add Photo
             </div>
           </div>
         )}

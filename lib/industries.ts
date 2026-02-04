@@ -1,0 +1,563 @@
+export interface Industry {
+  slug: string;
+  name: string;
+  headline: string;
+  tagline: string;
+  painPoints: {
+    title: string;
+    description: string;
+  }[];
+  useCases: {
+    title: string;
+    description: string;
+  }[];
+  relatedIndustries: string[];
+  metaDescription: string;
+}
+
+export const industries: Record<string, Industry> = {
+  "owner-operator": {
+    slug: "owner-operator",
+    name: "Owner Operators",
+    headline: "Professional Documentation Without the Enterprise Price",
+    tagline: "Finally, a photo app priced for solo and small operators.",
+    painPoints: [
+      {
+        title: "Other Apps Are Priced for Big Companies",
+        description:
+          "You've looked at CompanyCam, Jobber, ServiceTitan. CompanyCam starts at $79/month. Jobber with their Marketing Suite is $118/month. That's a truck payment, not a photo app.",
+      },
+      {
+        title: "You're Too Busy for Complicated Software",
+        description:
+          "You're quoting jobs, doing the work, handling billing, AND trying to grow your business. You don't have time for complex project management software.",
+      },
+      {
+        title: "You Know You Should Be Documenting",
+        description:
+          "You've seen other contractors killing it on social media with before/after content. You know documentation protects you. But who has time?",
+      },
+    ],
+    useCases: [
+      {
+        title: "Affordable Professional Documentation",
+        description:
+          "Free to start, just $29.99/month for Pro. No per-seat pricing that punishes small businesses.",
+      },
+      {
+        title: "30 Second Workflow",
+        description:
+          "Open app, tap before, do the job, tap after. Done. No project setup, no complexity.",
+      },
+      {
+        title: "Turn Work Into Growth",
+        description:
+          "Every job becomes marketing content with AI-generated captions. Grow without ad spend.",
+      },
+      {
+        title: "Protect Your Business",
+        description:
+          "Timestamped documentation protects you when customers question your work.",
+      },
+    ],
+    relatedIndustries: ["pressure-washing", "pest-control", "landscaping", "cleaning"],
+    metaDescription:
+      "Finally, a contractor photo app priced for owner operators. Free to start, just $29.99/mo for Pro. No per-seat pricing.",
+  },
+  "pressure-washing": {
+    slug: "pressure-washing",
+    name: "Pressure Washing",
+    headline: "Before & After Photos for Pressure Washing",
+    tagline: "Show the transformation. Win more jobs.",
+    painPoints: [
+      {
+        title: "Customers Forget How Dirty It Was",
+        description:
+          "By the time you're done, customers can't remember how bad it looked before. Without proof, your amazing work goes unappreciated.",
+      },
+      {
+        title: "Can't Prove You Did the Work",
+        description:
+          "When disputes arise, you have nothing but your word. Timestamped before/after photos protect your business and your reputation.",
+      },
+      {
+        title: "Amazing Results Not Being Shared",
+        description:
+          "Pressure washing transformations are incredibly satisfying to watch. But without easy documentation, you're missing out on free marketing.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Post to Social Media",
+        description:
+          "Turn every driveway, deck, and siding job into viral content. AI-generated captions and hashtags included.",
+      },
+      {
+        title: "Send to Customers",
+        description:
+          "Email professional PDF reports or text branded images directly to customers after every job.",
+      },
+      {
+        title: "Attach to Invoices",
+        description:
+          "Include before/after proof with every invoice. Customers pay faster when they see the value.",
+      },
+      {
+        title: "Protect Against Disputes",
+        description:
+          "Timestamped documentation protects you if a customer claims work wasn't done or wasn't satisfactory.",
+      },
+    ],
+    relatedIndustries: ["cleaning", "painting", "roofing", "pool-service"],
+    metaDescription:
+      "Document pressure washing jobs professionally. Combine before/afters, add your logo, share to social. Free to start.",
+  },
+  "pest-control": {
+    slug: "pest-control",
+    name: "Pest Control",
+    headline: "Document Your Pest Control Results",
+    tagline: "Proof of service that protects your business.",
+    painPoints: [
+      {
+        title: "Invisible Results Hard to Prove",
+        description:
+          "Unlike other trades, pest control results often can't be seen. Document entry points sealed, nests removed, and treatments applied.",
+      },
+      {
+        title: "Customers Question If Service Was Done",
+        description:
+          "When technicians visit while customers are away, questions arise. Photo documentation proves the work was completed.",
+      },
+      {
+        title: "No Visual Marketing Content",
+        description:
+          "Pest control isn't glamorous, but before/after documentation of infestations, damage, and solutions tells a powerful story.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Document Every Service Call",
+        description:
+          "Photograph entry points, treatment areas, and any pest activity before and after service.",
+      },
+      {
+        title: "Send Service Reports",
+        description:
+          "Generate professional PDF reports showing exactly what was done at each visit.",
+      },
+      {
+        title: "Build Your Portfolio",
+        description:
+          "Dramatic infestations and successful treatments make compelling marketing content (with permission).",
+      },
+      {
+        title: "Protect Against Liability",
+        description:
+          "Timestamped photos prove condition before treatment and work completed.",
+      },
+    ],
+    relatedIndustries: ["cleaning", "hvac", "roofing", "landscaping"],
+    metaDescription:
+      "Prove your pest control work with timestamped before/after photos. Professional reports in seconds. Free to start.",
+  },
+  landscaping: {
+    slug: "landscaping",
+    name: "Landscaping",
+    headline: "Showcase Your Landscaping Transformations",
+    tagline: "Let your work speak for itself.",
+    painPoints: [
+      {
+        title: "Big Transformations Not Captured",
+        description:
+          "Landscaping projects create dramatic changes, but without documentation, that impact fades from memory.",
+      },
+      {
+        title: "Portfolio Scattered Across Devices",
+        description:
+          "Your best work is buried in camera rolls across multiple phones. No organized way to showcase your projects.",
+      },
+      {
+        title: "Time-Consuming to Document",
+        description:
+          "Between the physical work and travel, who has time to organize photos, add branding, and post to social media?",
+      },
+    ],
+    useCases: [
+      {
+        title: "Build a Stunning Portfolio",
+        description:
+          "Every completed project becomes a professional portfolio piece with consistent branding.",
+      },
+      {
+        title: "Win More Bids",
+        description:
+          "Show potential customers exactly what you've done for others. Before/afters sell better than words.",
+      },
+      {
+        title: "Dominate Social Media",
+        description:
+          "Landscaping transformations perform incredibly well on Instagram and Facebook. Post consistently with AI captions.",
+      },
+      {
+        title: "Document Plant Health",
+        description:
+          "Track lawn treatments, tree health, and garden progress over time with dated photos.",
+      },
+    ],
+    relatedIndustries: ["pool-service", "painting", "cleaning", "pressure-washing"],
+    metaDescription:
+      "Showcase landscaping transformations with professional before/after photos. Build your portfolio, win more bids. Free to start.",
+  },
+  cleaning: {
+    slug: "cleaning",
+    name: "Cleaning Services",
+    headline: "Professional Photos for Cleaning Services",
+    tagline: "The proof is in the pictures.",
+    painPoints: [
+      {
+        title: "Before State Quickly Forgotten",
+        description:
+          "Customers forget how messy things were. Without documentation, your thorough work goes unrecognized.",
+      },
+      {
+        title: "Disputes About What Was Cleaned",
+        description:
+          "When customers claim areas were missed, you need proof of the condition before and after your visit.",
+      },
+      {
+        title: "No Way to Show Quality",
+        description:
+          "Quality cleaning is invisible when done right. Before/after photos make your excellence visible.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Document Move-Out Cleans",
+        description:
+          "Protect yourself with comprehensive before/after documentation for move-out and deep cleaning jobs.",
+      },
+      {
+        title: "Impress Property Managers",
+        description:
+          "Send professional reports that property managers can share with owners and tenants.",
+      },
+      {
+        title: "Market Your Services",
+        description:
+          "Dramatic cleaning transformations make compelling social media content.",
+      },
+      {
+        title: "Train Your Team",
+        description:
+          "Use documented examples to show new cleaners what 'done right' looks like.",
+      },
+    ],
+    relatedIndustries: ["pressure-washing", "painting", "handyman", "pest-control"],
+    metaDescription:
+      "Document cleaning jobs professionally. Before/after photos that prove your quality. Free to start.",
+  },
+  painting: {
+    slug: "painting",
+    name: "Painting",
+    headline: "Paint Job Documentation Made Easy",
+    tagline: "From prep to perfection, documented.",
+    painPoints: [
+      {
+        title: "Color Changes Hard to Remember",
+        description:
+          "Once the new color is up, no one remembers the old one. Before/afters show the true transformation.",
+      },
+      {
+        title: "Prep Work Not Valued",
+        description:
+          "Customers don't see the patching, priming, and prep that makes a great paint job. Document it all.",
+      },
+      {
+        title: "Quality Craftsmanship Not Showcased",
+        description:
+          "Clean lines, smooth finishes, and attention to detail deserve to be shown off.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Showcase Color Transformations",
+        description:
+          "Before/after comparisons make color changes dramatic and shareable.",
+      },
+      {
+        title: "Document Prep Work",
+        description:
+          "Show customers the patching, sanding, and priming that goes into quality work.",
+      },
+      {
+        title: "Build Your Portfolio",
+        description:
+          "Every interior and exterior job becomes a professional portfolio piece.",
+      },
+      {
+        title: "Win More Estimates",
+        description:
+          "Show potential customers your work history during estimates.",
+      },
+    ],
+    relatedIndustries: ["pressure-washing", "home-remodeling", "cleaning", "landscaping"],
+    metaDescription:
+      "Document paint jobs professionally. Before/after photos from prep to perfection. Free to start.",
+  },
+  roofing: {
+    slug: "roofing",
+    name: "Roofing",
+    headline: "Roof Repair & Replacement Documentation",
+    tagline: "Before, during, and after — all in one place.",
+    painPoints: [
+      {
+        title: "Customers Can't See the Roof",
+        description:
+          "Most homeowners never see their roof up close. Photo documentation shows them exactly what you found and fixed.",
+      },
+      {
+        title: "Hard to Prove Damage",
+        description:
+          "For insurance claims and estimates, clear before photos of damage are essential.",
+      },
+      {
+        title: "Insurance Documentation Needed",
+        description:
+          "Insurance companies require thorough documentation. Make it easy with organized before/after photos.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Document Storm Damage",
+        description:
+          "Capture hail damage, missing shingles, and repairs for insurance claims.",
+      },
+      {
+        title: "Show Homeowners Their Roof",
+        description:
+          "Give customers a clear view of what's happening on their roof.",
+      },
+      {
+        title: "Track Repair Progress",
+        description:
+          "Document multi-day jobs with before, during, and after photos.",
+      },
+      {
+        title: "Professional Estimates",
+        description:
+          "Include photos with estimates to justify your pricing.",
+      },
+    ],
+    relatedIndustries: ["hvac", "painting", "pressure-washing", "pest-control"],
+    metaDescription:
+      "Document roofing jobs for insurance and customers. Before/after photos, professional reports. Free to start.",
+  },
+  hvac: {
+    slug: "hvac",
+    name: "HVAC",
+    headline: "HVAC Service Documentation",
+    tagline: "Show customers exactly what you did.",
+    painPoints: [
+      {
+        title: "Invisible Work Inside Units",
+        description:
+          "Customers can't see inside their HVAC system. Photos show the dirty filters, clogged coils, and repairs you made.",
+      },
+      {
+        title: "Customers Question What Was Done",
+        description:
+          "Without visual proof, customers wonder if the service was really necessary or thorough.",
+      },
+      {
+        title: "Hard to Explain Value",
+        description:
+          "HVAC work is technical. Before/after photos make the value of your service instantly clear.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Document Maintenance Visits",
+        description:
+          "Show dirty vs. clean filters, coils, and components at every maintenance call.",
+      },
+      {
+        title: "Justify Repairs",
+        description:
+          "Photo evidence of worn parts and damage helps customers understand why repairs are needed.",
+      },
+      {
+        title: "Track Equipment Condition",
+        description:
+          "Document equipment condition over time to predict replacement needs.",
+      },
+      {
+        title: "Professional Service Reports",
+        description:
+          "Send detailed PDF reports showing exactly what was serviced.",
+      },
+    ],
+    relatedIndustries: ["pest-control", "roofing", "cleaning", "painting"],
+    metaDescription:
+      "Document HVAC service calls with before/after photos. Show customers exactly what you did. Free to start.",
+  },
+  "pool-service": {
+    slug: "pool-service",
+    name: "Pool Service",
+    headline: "Pool Cleaning Before & After",
+    tagline: "Crystal clear results, crystal clear proof.",
+    painPoints: [
+      {
+        title: "Water Clarity Changes Fast",
+        description:
+          "A green pool can be clear in hours. Without before photos, customers don't appreciate the transformation.",
+      },
+      {
+        title: "Weekly Service Blurs Together",
+        description:
+          "When you service pools regularly, customers forget what you're preventing. Documentation shows ongoing value.",
+      },
+      {
+        title: "Hard to Show Ongoing Value",
+        description:
+          "Maintenance prevents problems, but prevention is invisible. Document the work you do each visit.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Document Green-to-Clean",
+        description:
+          "Green pool transformations are incredibly satisfying. Document them for marketing gold.",
+      },
+      {
+        title: "Log Weekly Service",
+        description:
+          "Document each visit to show customers the consistent care you provide.",
+      },
+      {
+        title: "Market Your Services",
+        description:
+          "Before/after pool photos perform incredibly well on social media.",
+      },
+      {
+        title: "Equipment Documentation",
+        description:
+          "Photograph pump, filter, and equipment condition for maintenance records.",
+      },
+    ],
+    relatedIndustries: ["landscaping", "pressure-washing", "cleaning", "pest-control"],
+    metaDescription:
+      "Document pool cleaning with stunning before/after photos. Crystal clear results, crystal clear proof. Free to start.",
+  },
+  "home-remodeling": {
+    slug: "home-remodeling",
+    name: "Home Remodeling",
+    headline: "Document Your Remodeling Projects",
+    tagline: "From demo to done, every transformation captured.",
+    painPoints: [
+      {
+        title: "Long Projects Lose Impact",
+        description:
+          "A kitchen remodel takes weeks. By the time you're done, customers forget how bad it looked at the start.",
+      },
+      {
+        title: "Progress Gets Lost",
+        description:
+          "Without consistent documentation, you can't show clients the work behind the walls — framing, wiring, plumbing.",
+      },
+      {
+        title: "Portfolio is Scattered",
+        description:
+          "Your best work is buried across phones, folders, and years of photos with no organization.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Document Every Phase",
+        description:
+          "Demo, framing, rough-in, finish — create a visual timeline that shows the full scope of your work.",
+      },
+      {
+        title: "Impress Future Clients",
+        description:
+          "Show potential customers dramatic transformations from your past projects during estimates.",
+      },
+      {
+        title: "Protect Against Disputes",
+        description:
+          "Timestamped photos prove what was there before and exactly what work was completed.",
+      },
+      {
+        title: "Build Social Proof",
+        description:
+          "Remodeling before/afters are some of the most engaging content on social media.",
+      },
+    ],
+    relatedIndustries: ["painting", "roofing", "handyman", "cleaning"],
+    metaDescription:
+      "Document home remodeling projects professionally. Before/after photos from demo to done. Free to start.",
+  },
+  handyman: {
+    slug: "handyman",
+    name: "Handyman Services",
+    headline: "Document Your Handyman Work",
+    tagline: "Every fix. Every improvement. Documented.",
+    painPoints: [
+      {
+        title: "Small Jobs Add Up",
+        description:
+          "You do dozens of small jobs a week. Without documentation, customers forget the value of all those fixes.",
+      },
+      {
+        title: "Variety Makes Marketing Hard",
+        description:
+          "You fix faucets, hang TVs, repair drywall, and more. Hard to showcase such diverse work consistently.",
+      },
+      {
+        title: "No Time for Photos",
+        description:
+          "You're in and out quickly. Who has time to organize photos when you've got three more jobs today?",
+      },
+    ],
+    useCases: [
+      {
+        title: "Quick Job Documentation",
+        description:
+          "Document repairs in seconds — before, after, done. Perfect for the fast pace of handyman work.",
+      },
+      {
+        title: "Build a Diverse Portfolio",
+        description:
+          "Showcase the full range of your skills with organized before/after comparisons.",
+      },
+      {
+        title: "Send Professional Receipts",
+        description:
+          "Include before/after photos with invoices to remind customers of the value you provided.",
+      },
+      {
+        title: "Get More Referrals",
+        description:
+          "Make it easy for customers to share your work. Professional images get shared more.",
+      },
+    ],
+    relatedIndustries: ["home-remodeling", "painting", "cleaning", "hvac"],
+    metaDescription:
+      "Document handyman jobs quickly and professionally. Before/after photos for every fix. Free to start.",
+  },
+};
+
+export function getIndustry(slug: string): Industry | undefined {
+  return industries[slug];
+}
+
+export function getAllIndustries(): Industry[] {
+  return Object.values(industries);
+}
+
+export function getRelatedIndustries(slug: string): Industry[] {
+  const industry = industries[slug];
+  if (!industry) return [];
+  return industry.relatedIndustries
+    .map((s) => industries[s])
+    .filter(Boolean);
+}

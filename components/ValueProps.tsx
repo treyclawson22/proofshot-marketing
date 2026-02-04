@@ -7,13 +7,13 @@ export function ValueProps() {
           Everything you need. Nothing you don&apos;t.
         </h2>
         <p className="text-gray-600 text-lg max-w-xl mx-auto">
-          ProofShot Pro gives contractors the tools to capture, organize, and share proof of their work professionally.
+          ProofShot Pro gives contractors the tools to combine, organize, and share proof of their work professionally.
         </p>
       </div>
 
       {/* Value Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        {/* Card 1: Capture */}
+        {/* Card 1: Combine */}
         <div className="bg-white border border-gray-200 rounded-[20px] overflow-hidden transition-all duration-300 hover:border-gray-300 hover:shadow-xl hover:-translate-y-1 group">
           <div className="h-44 bg-gray-900 relative overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-br from-orange/10 to-transparent" />
@@ -36,7 +36,7 @@ export function ValueProps() {
             </div>
           </div>
           <div className="p-6 text-center">
-            <h3 className="font-display font-bold text-lg text-gray-900 mb-2">Capture</h3>
+            <h3 className="font-display font-bold text-lg text-gray-900 mb-2">Combine</h3>
             <p className="text-gray-600 text-sm leading-relaxed">Before & after photos with timestamps and GPS data.</p>
           </div>
         </div>

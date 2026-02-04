@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProofShot Pro - Full Page Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-900: #111827;
+      --orange: #e97a35;
+      --orange-hover: #d4682a;
+      --orange-light: #fef3eb;
+      --green: #10B981;
+      --green-dark: #059669;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==================== NAVIGATION ==================== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .nav-logo {
+      height: 32px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-600);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.7rem 1.5rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-hover);
+      transform: translateY(-1px);
+    }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 7rem 4rem 5rem;
+      gap: 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--orange-light);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--orange);
+      width: fit-content;
+    }
+
+    .hero h1 {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 6.5vw, 5.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--gray-900);
+    }
+
+    .hero h1 .highlight {
+      color: var(--orange);
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      padding: 1.1rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 14px rgba(233, 122, 53, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233, 122, 53, 0.4);
+    }
+
+    .btn-secondary {
+      color: var(--gray-900);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+
+    .btn-secondary:hover {
+      gap: 0.7rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--gray-900);
+      letter-spacing: -0.02em;
+    }
+
+    .hero-stat span {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Phone Mockup */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .phone-mockup {
+      position: relative;
+      width: 300px;
+      height: 620px;
+      background: var(--black);
+      border-radius: 44px;
+      padding: 12px;
+      box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.25);
+      transform: perspective(1000px) rotateY(-6deg) rotateX(2deg);
+      transition: transform 0.4s ease;
+    }
+
+    .phone-mockup:hover {
+      transform: perspective(1000px) rotateY(-3deg) rotateX(1deg);
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: #1a1a1a;
+      border-radius: 34px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .phone-notch {
+      width: 120px;
+      height: 28px;
+      background: var(--black);
+      border-radius: 0 0 20px 20px;
+      margin: 0 auto;
+    }
+
+    .phone-content {
+      flex: 1;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .phone-header {
+      color: white;
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-align: center;
+    }
+
+    .photo-slots {
+      display: flex;
+      gap: 0.65rem;
+      flex: 1;
+    }
+
+    .photo-slot {
+      flex: 1;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .photo-slot.before {
+      background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    }
+
+    .photo-slot.after {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    }
+
+    .photo-slot-icon {
+      width: 52px;
+      height: 52px;
+      border: 2px dashed rgba(255,255,255,0.45);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-slot-label {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .phone-button {
+      background: var(--orange);
+      color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* Floating Elements */
+    .floating-badge {
+      position: absolute;
+      background: var(--white);
+      padding: 0.85rem 1.1rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gray-900);
+    }
+
+    .floating-badge svg {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .floating-badge.top-left {
+      top: 30px;
+      left: -50px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .floating-badge.bottom-right {
+      bottom: 100px;
+      right: -30px;
+      animation: float 3s ease-in-out infinite 1.5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ==================== SOCIAL PROOF BAR ==================== */
+    .social-proof-bar {
+      background: var(--gray-50);
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .social-proof-bar p {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .industry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .industry-tag {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 0.6rem 1.25rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    /* ==================== VALUE PROPS ==================== */
+    .value-props {
+      padding: 6rem 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--gray-900);
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      color: var(--gray-600);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .value-props-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      border-color: var(--gray-300);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+
+    .value-card-screenshot {
+      width: 100%;
+      height: 180px;
+      background: var(--gray-900);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .value-card-screenshot::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(233,122,53,0.1) 0%, rgba(0,0,0,0) 50%);
+    }
+
+    .screenshot-placeholder {
+      color: var(--gray-500);
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1rem;
+      z-index: 1;
+    }
+
+    .screenshot-placeholder span {
+      display: block;
+      color: var(--gray-400);
+      font-size: 0.7rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Mini app screen mockup inside screenshot area */
+    .mini-screen {
+      width: 85%;
+      height: 85%;
+      background: #1f1f1f;
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mini-screen-header {
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-screen-header span {
+      font-size: 0.6rem;
+      color: var(--gray-400);
+      font-weight: 600;
+    }
+
+    .mini-screen-content {
+      flex: 1;
+      display: flex;
+      gap: 6px;
+    }
+
+    .mini-slot {
+      flex: 1;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-slot.before { background: linear-gradient(135deg, #374151 0%, #1f2937 100%); }
+    .mini-slot.after { background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); }
+    .mini-slot.report { background: var(--white); }
+    .mini-slot.share { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+    .mini-slot.protect { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-hover) 100%); }
+
+    .mini-slot span {
+      font-size: 0.5rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .mini-slot.report span {
+      color: var(--gray-600);
+    }
+
+    .mini-screen-btn {
+      height: 24px;
+      background: var(--orange);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-screen-btn span {
+      font-size: 0.55rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    /* PDF mini mockup */
+    .mini-pdf {
+      width: 70%;
+      height: 85%;
+      background: var(--white);
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .mini-pdf-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mini-pdf-logo {
+      width: 20px;
+      height: 20px;
+      background: var(--orange);
+      border-radius: 4px;
+    }
+
+    .mini-pdf-title {
+      flex: 1;
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 2px;
+    }
+
+    .mini-pdf-image {
+      flex: 1;
+      background: linear-gradient(90deg, var(--gray-300) 50%, var(--green-dark) 50%);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-pdf-image span {
+      font-size: 0.5rem;
+      color: var(--gray-600);
+      font-weight: 600;
+    }
+
+    .mini-pdf-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mini-pdf-line {
+      height: 6px;
+      background: var(--gray-100);
+      border-radius: 2px;
+    }
+
+    .mini-pdf-line:nth-child(2) { width: 80%; }
+    .mini-pdf-line:nth-child(3) { width: 60%; }
+
+    /* Share screen mini mockup */
+    .mini-share {
+      width: 85%;
+      height: 85%;
+      background: #1f1f1f;
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mini-share-preview {
+      flex: 1;
+      background: linear-gradient(135deg, var(--gray-600) 0%, var(--gray-700) 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-share-preview span {
+      font-size: 0.5rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .mini-share-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+
+    .mini-share-btn {
+      height: 22px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-share-btn.email { background: #3b82f6; }
+    .mini-share-btn.text { background: #22c55e; }
+    .mini-share-btn.social { background: #e11d48; }
+
+    .mini-share-btn span {
+      font-size: 0.45rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Protect screen mini mockup */
+    .mini-protect {
+      width: 85%;
+      height: 85%;
+      background: #1f1f1f;
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mini-protect-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mini-protect-check {
+      width: 18px;
+      height: 18px;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-protect-check svg {
+      width: 10px;
+      height: 10px;
+      color: white;
+    }
+
+    .mini-protect-title {
+      font-size: 0.55rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    .mini-protect-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mini-protect-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mini-protect-label {
+      font-size: 0.45rem;
+      color: var(--gray-500);
+    }
+
+    .mini-protect-value {
+      font-size: 0.45rem;
+      color: var(--gray-300);
+      font-weight: 500;
+    }
+
+    .value-card-content {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .value-card h3 {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* ==================== APP SHOWCASE ==================== */
+    .showcase {
+      padding: 5rem 2rem;
+    }
+
+    .showcase.alt-bg {
+      background: var(--gray-50);
+    }
+
+    .showcase-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .showcase-content.reverse {
+      direction: rtl;
+    }
+
+    .showcase-content.reverse > * {
+      direction: ltr;
+    }
+
+    .showcase-text h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      color: var(--gray-900);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+
+    .showcase-text p {
+      color: var(--gray-600);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .showcase-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .showcase-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+
+    .showcase-list svg {
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .showcase-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .showcase-phone {
+      width: 260px;
+      height: 540px;
+      background: var(--black);
+      border-radius: 40px;
+      padding: 10px;
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.2);
+    }
+
+    .showcase-phone-screen {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+      border-radius: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-400);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* ==================== TESTIMONIALS ==================== */
+    .testimonials {
+      padding: 6rem 2rem;
+      background: var(--gray-900);
+      color: var(--white);
+    }
+
+    .testimonials .section-header h2 {
+      color: var(--white);
+    }
+
+    .testimonials .section-header p {
+      color: var(--gray-400);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .testimonial-stars {
+      color: var(--orange);
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .testimonial-card blockquote {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--gray-300);
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .testimonial-author-info strong {
+      display: block;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .testimonial-author-info span {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    /* ==================== PRICING ==================== */
+    .pricing {
+      padding: 6rem 2rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--orange);
+      box-shadow: 0 20px 50px rgba(233, 122, 53, 0.15);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pricing-card h3 {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card .price {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 800;
+      font-size: 2.75rem;
+      color: var(--gray-900);
+      letter-spacing: -0.03em;
+    }
+
+    .pricing-card .price span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gray-500);
+    }
+
+    .pricing-card .price-note {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--gray-700);
+      font-size: 0.95rem;
+    }
+
+    .pricing-features svg {
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .pricing-card .btn-primary {
+      width: 100%;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .pricing-card .btn-outline {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 2rem;
+      border: 2px solid var(--gray-300);
+      border-radius: 100px;
+      font-weight: 600;
+      color: var(--gray-700);
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: all 0.2s;
+    }
+
+    .pricing-card .btn-outline:hover {
+      border-color: var(--gray-900);
+      color: var(--gray-900);
+    }
+
+    /* ==================== FAQ ==================== */
+    .faq {
+      padding: 6rem 2rem;
+      background: var(--gray-50);
+    }
+
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-900);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: inherit;
+    }
+
+    .faq-question:hover {
+      background: var(--gray-50);
+    }
+
+    .faq-question svg {
+      color: var(--gray-400);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* ==================== FINAL CTA ==================== */
+    .final-cta {
+      padding: 6rem 2rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--white) 0%, var(--orange-light) 100%);
+    }
+
+    .final-cta h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--gray-900);
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .final-cta p {
+      color: var(--gray-600);
+      font-size: 1.15rem;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    .final-cta .btn-primary {
+      font-size: 1.15rem;
+      padding: 1.25rem 2.5rem;
+    }
+
+    .final-cta .subtext {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      background: var(--gray-900);
+      color: var(--gray-400);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-brand {
+      max-width: 280px;
+    }
+
+    .footer-logo {
+      height: 36px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-column h4 {
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-column a {
+      color: var(--gray-400);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-column a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 7rem 2rem 4rem;
+      }
+
+      .hero-content {
+        align-items: center;
+      }
+
+      .hero-sub {
+        max-width: 100%;
+      }
+
+      .hero-cta {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .phone-mockup {
+        transform: none;
+        width: 280px;
+        height: 580px;
+      }
+
+      .floating-badge {
+        display: none;
+      }
+
+      .value-props-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+
+      .value-card-screenshot {
+        height: 160px;
+      }
+
+      .showcase-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .showcase-content.reverse {
+        direction: ltr;
+      }
+
+      .showcase-list {
+        align-items: center;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.75rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn-primary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .value-props-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+      }
+
+      .value-card-screenshot {
+        height: 180px;
+      }
+
+      .value-card-content {
+        padding: 1.25rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-brand {
+        max-width: 100%;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav>
+    <svg class="nav-logo" viewBox="0 0 434.38 81.73" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#333" d="M48.03,0c-1.12,0-2.13.46-2.86,1.19l-1.13,2.28-3.75,7.55H7.24c-3.99,0-7.24,3.24-7.24,7.24v9.04h37.2c5.86-7.16,14.68-11.8,24.6-12.05V0h-13.78ZM52.75,29.79c-6.5,3.52-10.91,10.39-10.91,18.3,0,11.2,8.86,20.34,19.96,20.77V27.31c-3.27.13-6.35,1.01-9.06,2.48ZM48.15,27.29c3.89-2.72,8.58-4.37,13.65-4.53v-5.16c-8.47.23-16.08,3.91-21.48,9.69-.74.79-1.44,1.63-2.09,2.5-3.83,5.1-6.09,11.43-6.09,18.3,0,16.56,13.2,30.04,29.66,30.48v-5.16c-13.61-.44-24.51-11.61-24.51-25.32,0-7.19,2.99-13.69,7.81-18.3.94-.91,1.96-1.74,3.04-2.5ZM29.78,48.09c0-6.77,2.05-13.07,5.56-18.3H0v44.7c0,4,3.25,7.24,7.24,7.24h54.56v-.81c-17.76-.44-32.02-14.98-32.02-32.84Z"/>
+      <path fill="#333" d="M16.18,5.18h8.48c1.76,0,3.18,1.42,3.18,3.18v1.32h-14.85v-1.32c0-1.76,1.42-3.18,3.18-3.18Z"/>
+      <path fill="#e97a35" d="M117.99,29.79v44.7c0,4-3.24,7.24-7.24,7.24h-47.29v-.81c15.27-.38,27.96-11.18,31.21-25.56h-2.42c-3.2,13.07-14.82,22.83-28.79,23.2v-5.16c12.43-.4,22.6-9.75,24.26-21.82h10.41v5.02l10.71-8.87-5.35-4.43-5.35-4.44v5.03h-10.52c-.91-5.51-3.6-10.41-7.46-14.1-.95-.91-1.96-1.74-3.04-2.5-3.89-2.72-8.58-4.37-13.65-4.53v-5.16c8.47.23,16.08,3.91,21.47,9.69.74.79,1.44,1.63,2.1,2.5,2.22,2.96,3.91,6.33,4.95,9.98h2.44c-.94-3.61-2.48-6.97-4.5-9.98h28.07Z"/>
+      <path fill="#e97a35" d="M110.75,11.02h-26.4l-3.75-7.55-1.13-2.28c-.73-.73-1.75-1.19-2.86-1.19h-13.15v15.24c9.92.25,18.74,4.89,24.61,12.05h29.92v-9.04c0-4-3.24-7.24-7.24-7.24ZM110.1,22.36c0,.42-.35.76-.76.76h-12c-.42,0-.77-.34-.77-.76v-5.36c0-.42.35-.77.77-.77h12c.42,0,.76.34.76.77v5.36Z"/>
+      <path fill="#333" d="M153.33,35.35c-2.02-1.58-4.92-2.38-8.73-2.38h-11l-5.22,29.52h9.59l1.76-9.62h2.83c2.17,0,4.1-.22,5.8-.65,1.7-.42,3.14-1.09,4.33-1.98,1.19-.89,2.11-2.03,2.73-3.42.62-1.39.94-3.03.94-4.92,0-2.78-1.01-4.95-3.03-6.55ZM145.64,44.94c-.75.45-1.8.67-3.13.67h-1.54l.91-5.09h1.46c1.05,0,1.89.16,2.5.5.61.33.92.95.92,1.84,0,.95-.38,1.64-1.13,2.08Z"/>
+      <path fill="#333" d="M182.89,47.19c1.16-1.58,1.73-3.6,1.73-6.05,0-1.31-.24-2.47-.73-3.48-.49-1.01-1.19-1.87-2.11-2.56-.91-.69-2.03-1.22-3.34-1.58-1.31-.36-2.76-.55-4.38-.55h-12.13l-5.22,29.52h9.3l1.84-10.79h1.17l4.05,10.79h10.83l-5.75-12.05c2-.58,3.58-1.67,4.73-3.25ZM173.95,44.93c-.73.42-1.72.64-3,.64h-1.92l.87-4.96h1.8c1.03,0,1.84.16,2.44.48s.9.91.9,1.77c0,.95-.37,1.63-1.09,2.07Z"/>
+      <path fill="#333" d="M218.72,40.23c-.64-1.64-1.58-3.06-2.82-4.25-1.23-1.19-2.77-2.11-4.58-2.78-1.83-.64-3.93-.98-6.32-.98-2.7,0-5.15.47-7.36,1.38-2.2.91-4.09,2.17-5.65,3.75-1.55,1.58-2.77,3.44-3.62,5.58-.87,2.14-1.29,4.43-1.29,6.88,0,1.98.32,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.23,1.19,2.77,2.11,4.59,2.77,1.82.65,3.91.98,6.27.98,2.73,0,5.19-.46,7.4-1.37,2.21-.92,4.1-2.17,5.67-3.76,1.58-1.58,2.78-3.44,3.63-5.58.85-2.14,1.27-4.43,1.27-6.88,0-1.98-.33-3.78-.96-5.42ZM209.13,49.37c-.33.97-.8,1.83-1.41,2.58s-1.35,1.35-2.21,1.8c-.87.44-1.84.67-2.91.67-.89,0-1.68-.14-2.36-.42-.69-.28-1.25-.65-1.71-1.14-.47-.48-.81-1.05-1.04-1.71-.24-.65-.36-1.36-.36-2.11,0-1,.17-1.99.51-2.96.33-.97.8-1.84,1.41-2.59s1.36-1.36,2.24-1.81c.87-.46,1.85-.69,2.94-.69.86,0,1.63.14,2.31.42.69.28,1.25.66,1.71,1.15.46.48.8,1.05,1.04,1.71s.36,1.36.36,2.11c0,1.03-.17,2.02-.51,3Z"/>
+      <path fill="#333" d="M253.45,40.23c-.64-1.64-1.58-3.06-2.81-4.25-1.24-1.19-2.77-2.11-4.59-2.78-1.82-.64-3.93-.98-6.32-.98-2.69,0-5.15.47-7.35,1.38-2.21.91-4.1,2.17-5.65,3.75-1.56,1.58-2.77,3.44-3.63,5.58-.86,2.14-1.29,4.43-1.29,6.88,0,1.98.32,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.24,1.19,2.77,2.11,4.59,2.77,1.82.65,3.91.98,6.28.98,2.72,0,5.18-.46,7.4-1.37,2.21-.92,4.1-2.17,5.67-3.76,1.57-1.58,2.78-3.44,3.62-5.58.85-2.14,1.27-4.43,1.27-6.88,0-1.98-.32-3.78-.96-5.42ZM243.87,49.37c-.33.97-.81,1.83-1.42,2.58s-1.35,1.35-2.21,1.8c-.86.44-1.83.67-2.91.67-.89,0-1.67-.14-2.36-.42-.68-.28-1.25-.65-1.71-1.14-.46-.48-.81-1.05-1.04-1.71-.24-.65-.35-1.36-.35-2.11,0-1,.16-1.99.5-2.96.33-.97.81-1.84,1.42-2.59s1.36-1.36,2.23-1.81c.87-.46,1.85-.69,2.94-.69.87,0,1.63.14,2.32.42.68.28,1.25.66,1.71,1.15.46.48.81,1.05,1.04,1.71.24.65.35,1.36.35,2.11,0,1.03-.16,2.02-.5,3Z"/>
+      <path fill="#333" d="M278.34,41.11l1.42-8.13h-19.01l-5.21,29.52h9.46l1.8-10.17h9.04l1.38-7.84h-9.09l.63-3.38h9.58Z"/>
+      <path fill="#e97a35" d="M300.24,47.45c-.69-.69-1.54-1.31-2.54-1.84-1-.53-2.13-1-3.4-1.42-1.02-.33-1.8-.65-2.33-.96-.52-.31-.79-.73-.79-1.3,0-.69.32-1.21.94-1.54.63-.33,1.33-.5,2.11-.5,1,0,1.88.18,2.63.52.75.35,1.36.8,1.84,1.36l6.17-5.96c-.53-.56-1.18-1.06-1.96-1.5-.78-.45-1.63-.83-2.55-1.15s-1.89-.56-2.91-.75c-1.03-.18-2.07-.27-3.13-.27-1.92,0-3.68.27-5.28.82-1.59.54-2.97,1.29-4.12,2.25-1.16.96-2.04,2.09-2.67,3.4-.63,1.31-.94,2.73-.94,4.25,0,1.25.2,2.31.59,3.19.38.87.92,1.62,1.6,2.24.69.63,1.49,1.16,2.42,1.61.93.44,1.93.83,2.99,1.17,1.33.42,2.24.82,2.73,1.21.49.39.73.83.73,1.34,0,.6-.29,1.08-.87,1.4-.58.32-1.36.47-2.33.47-.44,0-.93-.06-1.46-.19-.52-.12-1.04-.29-1.56-.5-.51-.2-1.01-.47-1.48-.77-.47-.31-.88-.65-1.22-1.04l-6.58,6.09c.69.66,1.51,1.27,2.46,1.79.95.53,1.95.97,3.02,1.34,1.07.36,2.19.64,3.36.83,1.17.2,2.33.29,3.5.29,1.48,0,2.99-.2,4.54-.59,1.55-.39,2.97-1,4.26-1.84,1.28-.83,2.34-1.92,3.18-3.25.82-1.34,1.24-2.95,1.24-4.84,0-1.11-.19-2.11-.56-3-.38-.89-.91-1.68-1.6-2.38Z"/>
+      <path fill="#e97a35" d="M327.54,32.97l-1.8,10.13h-8.42l1.79-10.13h-9.58l-5.22,29.52h9.63l2-11.34h8.42l-2,11.34h9.63l5.21-29.52h-9.67Z"/>
+      <path fill="#e97a35" d="M370.23,40.23c-.64-1.64-1.58-3.06-2.82-4.25-1.23-1.19-2.77-2.11-4.59-2.78-1.82-.64-3.93-.98-6.31-.98-2.7,0-5.15.47-7.36,1.38-2.21.91-4.09,2.17-5.65,3.75-1.56,1.58-2.77,3.44-3.62,5.58-.87,2.14-1.3,4.43-1.3,6.88,0,1.98.33,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.23,1.19,2.76,2.11,4.58,2.77s3.92.98,6.28.98c2.73,0,5.19-.46,7.4-1.37,2.2-.92,4.1-2.17,5.67-3.76,1.58-1.58,2.78-3.44,3.63-5.58.84-2.14,1.27-4.43,1.27-6.88,0-1.98-.32-3.78-.96-5.42ZM360.64,49.37c-.33.97-.81,1.83-1.41,2.58-.61.75-1.36,1.35-2.21,1.8-.87.44-1.84.67-2.92.67-.89,0-1.67-.14-2.35-.42-.69-.28-1.25-.65-1.71-1.14-.46-.48-.8-1.05-1.04-1.71-.24-.65-.36-1.36-.36-2.11,0-1,.17-1.99.51-2.96.33-.97.8-1.84,1.41-2.59s1.36-1.36,2.23-1.81c.88-.46,1.86-.69,2.95-.69.86,0,1.63.14,2.31.42.68.28,1.25.66,1.71,1.15.47.48.81,1.05,1.04,1.71.24.65.36,1.36.36,2.11,0,1.03-.17,2.02-.51,3Z"/>
+      <path fill="#e97a35" d="M373.69,32.97l-1.46,8.13h7.46l-3.75,21.39h9.67l3.75-21.39h7.22l1.46-8.13h-24.35Z"/>
+    </svg>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Get Started Free</a>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        NEW — AI-powered captions
+      </div>
+
+      <h1>SHARE<br>THE<br><span class="highlight">PROOF.</span></h1>
+
+      <p class="hero-sub">
+        Before & after documentation for contractors who mean business. Capture, brand, share — in 30 seconds.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#" class="btn-primary">
+          Get Started Free
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn-secondary">
+          See How It Works
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>10,000+</strong>
+          <span>Contractors</span>
+        </div>
+        <div class="hero-stat">
+          <strong>500K+</strong>
+          <span>Photos Taken</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4.9★</strong>
+          <span>Rating</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="floating-badge top-left">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        PDF Report Ready
+      </div>
+      <div class="floating-badge bottom-right">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Sent to Customer
+      </div>
+
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <div class="phone-notch"></div>
+          <div class="phone-content">
+            <div class="phone-header">New Project</div>
+            <div class="photo-slots">
+              <div class="photo-slot before">
+                <div class="photo-slot-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <span class="photo-slot-label">Before</span>
+              </div>
+              <div class="photo-slot after">
+                <div class="photo-slot-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <span class="photo-slot-label">After</span>
+              </div>
+            </div>
+            <div class="phone-button">Continue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOCIAL PROOF BAR ==================== -->
+  <section class="social-proof-bar">
+    <p>Trusted by contractors in every trade</p>
+    <div class="industry-tags">
+      <span class="industry-tag">Pressure Washing</span>
+      <span class="industry-tag">Pest Control</span>
+      <span class="industry-tag">Landscaping</span>
+      <span class="industry-tag">HVAC</span>
+      <span class="industry-tag">Roofing</span>
+      <span class="industry-tag">Cleaning</span>
+      <span class="industry-tag">Painting</span>
+      <span class="industry-tag">Plumbing</span>
+    </div>
+  </section>
+
+  <!-- ==================== VALUE PROPS ==================== -->
+  <section class="value-props" id="features">
+    <div class="section-header">
+      <h2>Everything you need. Nothing you don't.</h2>
+      <p>Built for contractors who want to document their work, not fight with software.</p>
+    </div>
+
+    <div class="value-props-grid">
+      <!-- Card 1: Capture -->
+      <div class="value-card">
+        <div class="value-card-screenshot">
+          <div class="mini-screen">
+            <div class="mini-screen-header"><span>New Project</span></div>
+            <div class="mini-screen-content">
+              <div class="mini-slot before"><span>Before</span></div>
+              <div class="mini-slot after"><span>After</span></div>
+            </div>
+            <div class="mini-screen-btn"><span>Continue</span></div>
+          </div>
+        </div>
+        <div class="value-card-content">
+          <h3>Capture in Seconds</h3>
+          <p>Snap before & after photos with one tap. Automatically organized by project.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Reports -->
+      <div class="value-card">
+        <div class="value-card-screenshot">
+          <div class="mini-pdf">
+            <div class="mini-pdf-header">
+              <div class="mini-pdf-logo"></div>
+              <div class="mini-pdf-title"></div>
+            </div>
+            <div class="mini-pdf-image"><span>Before | After</span></div>
+            <div class="mini-pdf-lines">
+              <div class="mini-pdf-line"></div>
+              <div class="mini-pdf-line"></div>
+              <div class="mini-pdf-line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="value-card-content">
+          <h3>Professional Reports</h3>
+          <p>Generate branded PDF reports your customers will love. Logo, details, everything.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Share -->
+      <div class="value-card">
+        <div class="value-card-screenshot">
+          <div class="mini-share">
+            <div class="mini-share-preview"><span>Your before/after</span></div>
+            <div class="mini-share-buttons">
+              <div class="mini-share-btn email"><span>Email</span></div>
+              <div class="mini-share-btn text"><span>Text</span></div>
+              <div class="mini-share-btn social"><span>Social</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="value-card-content">
+          <h3>Share Anywhere</h3>
+          <p>Email, text, or post to social with AI-generated captions and hashtags.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Protect -->
+      <div class="value-card">
+        <div class="value-card-screenshot">
+          <div class="mini-protect">
+            <div class="mini-protect-header">
+              <div class="mini-protect-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="mini-protect-title">Project Verified</span>
+            </div>
+            <div class="mini-protect-details">
+              <div class="mini-protect-row">
+                <span class="mini-protect-label">Date</span>
+                <span class="mini-protect-value">Jan 14, 2026</span>
+              </div>
+              <div class="mini-protect-row">
+                <span class="mini-protect-label">Time</span>
+                <span class="mini-protect-value">2:34 PM</span>
+              </div>
+              <div class="mini-protect-row">
+                <span class="mini-protect-label">Location</span>
+                <span class="mini-protect-value">Austin, TX</span>
+              </div>
+              <div class="mini-protect-row">
+                <span class="mini-protect-label">Photos</span>
+                <span class="mini-protect-value">4 captured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="value-card-content">
+          <h3>Protect Your Work</h3>
+          <p>Timestamped proof of completion. Never lose a payment dispute again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOWCASE 1 ==================== -->
+  <section class="showcase alt-bg">
+    <div class="showcase-content">
+      <div class="showcase-text">
+        <h2>From Job Site to Pro Photo in 30 Seconds</h2>
+        <p>No more fumbling with photo apps and editors. Capture your before and after, pick a template, and you're done. Your logo is automatically applied.</p>
+        <ul class="showcase-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Tap to capture before & after
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            4 professional templates
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Your logo, your brand
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Works offline
+          </li>
+        </ul>
+      </div>
+      <div class="showcase-visual">
+        <div class="showcase-phone">
+          <div class="showcase-phone-screen">
+            [Template Selection Screen]<br><br>Modern • Classic • Bold • Minimal
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOWCASE 2 ==================== -->
+  <section class="showcase">
+    <div class="showcase-content reverse">
+      <div class="showcase-text">
+        <h2>Reports That Win Customers</h2>
+        <p>Send professional PDF reports that make you look like a Fortune 500 company. Your branding, your contact info, even a QR code to your review page.</p>
+        <ul class="showcase-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Branded PDF reports
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Customer details & work notes
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            QR code to your reviews
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Email or text in one tap
+          </li>
+        </ul>
+      </div>
+      <div class="showcase-visual">
+        <div class="showcase-phone">
+          <div class="showcase-phone-screen">
+            [PDF Report Preview]<br><br>Your Logo<br>Before/After<br>Work Details
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOWCASE 3 ==================== -->
+  <section class="showcase alt-bg">
+    <div class="showcase-content">
+      <div class="showcase-text">
+        <h2>Turn Every Job Into Marketing Gold</h2>
+        <p>AI writes your social captions. Hashtags included. Post your work and attract new customers without lifting a finger.</p>
+        <ul class="showcase-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            AI-generated captions
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Industry-specific hashtags
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Watermarked for social
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Clean versions saved
+          </li>
+        </ul>
+      </div>
+      <div class="showcase-visual">
+        <div class="showcase-phone">
+          <div class="showcase-phone-screen">
+            [Social Share Screen]<br><br>"Another pressure washing transformation! 💪"<br><br>#pressurewashing #beforeandafter
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>Contractors Love ProofShot</h2>
+      <p>Don't take our word for it. Here's what the pros are saying.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"I used to spend 20 minutes after every job organizing photos and sending emails. Now it's 30 seconds. ProofShot paid for itself the first week."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div class="testimonial-author-info">
+            <strong>Mike Rodriguez</strong>
+            <span>Pressure Washing Pro, Austin TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"My customers love the PDF reports. They look so professional. I've gotten referrals just because people were impressed by the documentation."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SJ</div>
+          <div class="testimonial-author-info">
+            <strong>Sarah Johnson</strong>
+            <span>Elite Cleaning Services, Denver CO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"The AI captions are a game changer. I hate writing social posts but now I just tap a button and it's done. My Instagram has never looked better."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JT</div>
+          <div class="testimonial-author-info">
+            <strong>James Thompson</strong>
+            <span>Thompson Landscaping, Phoenix AZ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section class="pricing" id="pricing">
+    <div class="section-header">
+      <h2>Simple, Honest Pricing</h2>
+      <p>Start free. Upgrade when you need more.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <div class="price">$0<span>/month</span></div>
+        <p class="price-note">Free forever</p>
+        <ul class="pricing-features">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            5 projects/month
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            10 stored projects
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            All 4 templates
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            ProofShot branding
+          </li>
+        </ul>
+        <a href="#" class="btn-outline">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <h3>Pro</h3>
+        <div class="price">$29.99<span>/month</span></div>
+        <p class="price-note">or $249.99/year (save 30%)</p>
+        <ul class="pricing-features">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Unlimited projects
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            3 team members
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Remove branding
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            AI captions
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            PDF reports
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Priority support
+          </li>
+        </ul>
+        <a href="#" class="btn-primary">Go Pro</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq" id="faq">
+    <div class="section-header">
+      <h2>Questions? We've got answers.</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-question">
+          What devices does ProofShot work on?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          ProofShot is a Progressive Web App that works on any modern smartphone or tablet. Install it directly from your browser — no app store needed. Works on iPhone, Android, iPad, and desktop.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Does it work offline?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Yes! Capture photos and create projects without internet. Everything syncs automatically when you're back online. Perfect for job sites with spotty service.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I use my own logo?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Absolutely. Upload your logo once in settings, and it's automatically applied to every before/after image and PDF report. You can even adjust the size and position.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What's included in the free plan?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          5 projects per month, 10 stored projects max, and all core features including all 4 templates. The only limitation is ProofShot branding appears on your outputs.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I cancel anytime?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Yes. No contracts, no commitments. Cancel your Pro subscription anytime from your account settings. Your projects are still accessible, you just can't create new ones beyond the free limit.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is my data secure?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Yes. We use industry-standard encryption and secure cloud storage. Your photos and customer data are never shared or sold. We take privacy seriously.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you offer team accounts?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          Yes! Pro plans include 3 team members. Add more for $9.99/user/month. Lifetime includes 30 users. Everyone shares the same projects and branding.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta">
+    <h2>Ready to Share The Proof?</h2>
+    <p>Join thousands of contractors who document smarter, not harder.</p>
+    <a href="#" class="btn-primary">
+      Get Started Free
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <p class="subtext">No credit card required</p>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <svg class="footer-logo" viewBox="0 0 434.38 81.73" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#fff" d="M48.03,0c-1.12,0-2.13.46-2.86,1.19l-1.13,2.28-3.75,7.55H7.24c-3.99,0-7.24,3.24-7.24,7.24v9.04h37.2c5.86-7.16,14.68-11.8,24.6-12.05V0h-13.78ZM52.75,29.79c-6.5,3.52-10.91,10.39-10.91,18.3,0,11.2,8.86,20.34,19.96,20.77V27.31c-3.27.13-6.35,1.01-9.06,2.48ZM48.15,27.29c3.89-2.72,8.58-4.37,13.65-4.53v-5.16c-8.47.23-16.08,3.91-21.48,9.69-.74.79-1.44,1.63-2.09,2.5-3.83,5.1-6.09,11.43-6.09,18.3,0,16.56,13.2,30.04,29.66,30.48v-5.16c-13.61-.44-24.51-11.61-24.51-25.32,0-7.19,2.99-13.69,7.81-18.3.94-.91,1.96-1.74,3.04-2.5ZM29.78,48.09c0-6.77,2.05-13.07,5.56-18.3H0v44.7c0,4,3.25,7.24,7.24,7.24h54.56v-.81c-17.76-.44-32.02-14.98-32.02-32.84Z"/>
+          <path fill="#fff" d="M16.18,5.18h8.48c1.76,0,3.18,1.42,3.18,3.18v1.32h-14.85v-1.32c0-1.76,1.42-3.18,3.18-3.18Z"/>
+          <path fill="#e97a35" d="M117.99,29.79v44.7c0,4-3.24,7.24-7.24,7.24h-47.29v-.81c15.27-.38,27.96-11.18,31.21-25.56h-2.42c-3.2,13.07-14.82,22.83-28.79,23.2v-5.16c12.43-.4,22.6-9.75,24.26-21.82h10.41v5.02l10.71-8.87-5.35-4.43-5.35-4.44v5.03h-10.52c-.91-5.51-3.6-10.41-7.46-14.1-.95-.91-1.96-1.74-3.04-2.5-3.89-2.72-8.58-4.37-13.65-4.53v-5.16c8.47.23,16.08,3.91,21.47,9.69.74.79,1.44,1.63,2.1,2.5,2.22,2.96,3.91,6.33,4.95,9.98h2.44c-.94-3.61-2.48-6.97-4.5-9.98h28.07Z"/>
+          <path fill="#e97a35" d="M110.75,11.02h-26.4l-3.75-7.55-1.13-2.28c-.73-.73-1.75-1.19-2.86-1.19h-13.15v15.24c9.92.25,18.74,4.89,24.61,12.05h29.92v-9.04c0-4-3.24-7.24-7.24-7.24ZM110.1,22.36c0,.42-.35.76-.76.76h-12c-.42,0-.77-.34-.77-.76v-5.36c0-.42.35-.77.77-.77h12c.42,0,.76.34.76.77v5.36Z"/>
+          <!-- Full wordmark paths -->
+          <path fill="#fff" d="M400.23,63.33h-.88l.98-5.56h-2l.13-.77h4.87l-.13.77h-1.99l-.98,5.56Z"/>
+          <path fill="#fff" d="M406.47,61.88h0l2.77-4.88h1.36l-1.11,6.33h-.87l.94-5.29h-.03l-3.05,5.29h-.55l-1.17-5.29h-.02l-.94,5.29h-.84l1.12-6.33h1.35l1.03,4.88Z"/>
+          <path fill="#fff" d="M153.33,35.35c-2.02-1.58-4.92-2.38-8.73-2.38h-11l-5.22,29.52h9.59l1.76-9.62h2.83c2.17,0,4.1-.22,5.8-.65,1.7-.42,3.14-1.09,4.33-1.98,1.19-.89,2.11-2.03,2.73-3.42.62-1.39.94-3.03.94-4.92,0-2.78-1.01-4.95-3.03-6.55ZM145.64,44.94c-.75.45-1.8.67-3.13.67h-1.54l.91-5.09h1.46c1.05,0,1.89.16,2.5.5.61.33.92.95.92,1.84,0,.95-.38,1.64-1.13,2.08Z"/>
+          <path fill="#fff" d="M182.89,47.19c1.16-1.58,1.73-3.6,1.73-6.05,0-1.31-.24-2.47-.73-3.48-.49-1.01-1.19-1.87-2.11-2.56-.91-.69-2.03-1.22-3.34-1.58-1.31-.36-2.76-.55-4.38-.55h-12.13l-5.22,29.52h9.3l1.84-10.79h1.17l4.05,10.79h10.83l-5.75-12.05c2-.58,3.58-1.67,4.73-3.25ZM173.95,44.93c-.73.42-1.72.64-3,.64h-1.92l.87-4.96h1.8c1.03,0,1.84.16,2.44.48s.9.91.9,1.77c0,.95-.37,1.63-1.09,2.07Z"/>
+          <path fill="#fff" d="M218.72,40.23c-.64-1.64-1.58-3.06-2.82-4.25-1.23-1.19-2.77-2.11-4.58-2.78-1.83-.64-3.93-.98-6.32-.98-2.7,0-5.15.47-7.36,1.38-2.2.91-4.09,2.17-5.65,3.75-1.55,1.58-2.77,3.44-3.62,5.58-.87,2.14-1.29,4.43-1.29,6.88,0,1.98.32,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.23,1.19,2.77,2.11,4.59,2.77,1.82.65,3.91.98,6.27.98,2.73,0,5.19-.46,7.4-1.37,2.21-.92,4.1-2.17,5.67-3.76,1.58-1.58,2.78-3.44,3.63-5.58.85-2.14,1.27-4.43,1.27-6.88,0-1.98-.33-3.78-.96-5.42ZM209.13,49.37c-.33.97-.8,1.83-1.41,2.58s-1.35,1.35-2.21,1.8c-.87.44-1.84.67-2.91.67-.89,0-1.68-.14-2.36-.42-.69-.28-1.25-.65-1.71-1.14-.47-.48-.81-1.05-1.04-1.71-.24-.65-.36-1.36-.36-2.11,0-1,.17-1.99.51-2.96.33-.97.8-1.84,1.41-2.59s1.36-1.36,2.24-1.81c.87-.46,1.85-.69,2.94-.69.86,0,1.63.14,2.31.42.69.28,1.25.66,1.71,1.15.46.48.8,1.05,1.04,1.71s.36,1.36.36,2.11c0,1.03-.17,2.02-.51,3Z"/>
+          <path fill="#fff" d="M253.45,40.23c-.64-1.64-1.58-3.06-2.81-4.25-1.24-1.19-2.77-2.11-4.59-2.78-1.82-.64-3.93-.98-6.32-.98-2.69,0-5.15.47-7.35,1.38-2.21.91-4.1,2.17-5.65,3.75-1.56,1.58-2.77,3.44-3.63,5.58-.86,2.14-1.29,4.43-1.29,6.88,0,1.98.32,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.24,1.19,2.77,2.11,4.59,2.77,1.82.65,3.91.98,6.28.98,2.72,0,5.18-.46,7.4-1.37,2.21-.92,4.1-2.17,5.67-3.76,1.57-1.58,2.78-3.44,3.62-5.58.85-2.14,1.27-4.43,1.27-6.88,0-1.98-.32-3.78-.96-5.42ZM243.87,49.37c-.33.97-.81,1.83-1.42,2.58s-1.35,1.35-2.21,1.8c-.86.44-1.83.67-2.91.67-.89,0-1.67-.14-2.36-.42-.68-.28-1.25-.65-1.71-1.14-.46-.48-.81-1.05-1.04-1.71-.24-.65-.35-1.36-.35-2.11,0-1,.16-1.99.5-2.96.33-.97.81-1.84,1.42-2.59s1.36-1.36,2.23-1.81c.87-.46,1.85-.69,2.94-.69.87,0,1.63.14,2.32.42.68.28,1.25.66,1.71,1.15.46.48.81,1.05,1.04,1.71.24.65.35,1.36.35,2.11,0,1.03-.16,2.02-.5,3Z"/>
+          <path fill="#fff" d="M278.34,41.11l1.42-8.13h-19.01l-5.21,29.52h9.46l1.8-10.17h9.04l1.38-7.84h-9.09l.63-3.38h9.58Z"/>
+          <path fill="#e97a35" d="M300.24,47.45c-.69-.69-1.54-1.31-2.54-1.84-1-.53-2.13-1-3.4-1.42-1.02-.33-1.8-.65-2.33-.96-.52-.31-.79-.73-.79-1.3,0-.69.32-1.21.94-1.54.63-.33,1.33-.5,2.11-.5,1,0,1.88.18,2.63.52.75.35,1.36.8,1.84,1.36l6.17-5.96c-.53-.56-1.18-1.06-1.96-1.5-.78-.45-1.63-.83-2.55-1.15s-1.89-.56-2.91-.75c-1.03-.18-2.07-.27-3.13-.27-1.92,0-3.68.27-5.28.82-1.59.54-2.97,1.29-4.12,2.25-1.16.96-2.04,2.09-2.67,3.4-.63,1.31-.94,2.73-.94,4.25,0,1.25.2,2.31.59,3.19.38.87.92,1.62,1.6,2.24.69.63,1.49,1.16,2.42,1.61.93.44,1.93.83,2.99,1.17,1.33.42,2.24.82,2.73,1.21.49.39.73.83.73,1.34,0,.6-.29,1.08-.87,1.4-.58.32-1.36.47-2.33.47-.44,0-.93-.06-1.46-.19-.52-.12-1.04-.29-1.56-.5-.51-.2-1.01-.47-1.48-.77-.47-.31-.88-.65-1.22-1.04l-6.58,6.09c.69.66,1.51,1.27,2.46,1.79.95.53,1.95.97,3.02,1.34,1.07.36,2.19.64,3.36.83,1.17.2,2.33.29,3.5.29,1.48,0,2.99-.2,4.54-.59,1.55-.39,2.97-1,4.26-1.84,1.28-.83,2.34-1.92,3.18-3.25.82-1.34,1.24-2.95,1.24-4.84,0-1.11-.19-2.11-.56-3-.38-.89-.91-1.68-1.6-2.38Z"/>
+          <path fill="#e97a35" d="M327.54,32.97l-1.8,10.13h-8.42l1.79-10.13h-9.58l-5.22,29.52h9.63l2-11.34h8.42l-2,11.34h9.63l5.21-29.52h-9.67Z"/>
+          <path fill="#e97a35" d="M370.23,40.23c-.64-1.64-1.58-3.06-2.82-4.25-1.23-1.19-2.77-2.11-4.59-2.78-1.82-.64-3.93-.98-6.31-.98-2.7,0-5.15.47-7.36,1.38-2.21.91-4.09,2.17-5.65,3.75-1.56,1.58-2.77,3.44-3.62,5.58-.87,2.14-1.3,4.43-1.3,6.88,0,1.98.33,3.78.96,5.42.64,1.64,1.58,3.05,2.82,4.25,1.23,1.19,2.76,2.11,4.58,2.77s3.92.98,6.28.98c2.73,0,5.19-.46,7.4-1.37,2.2-.92,4.1-2.17,5.67-3.76,1.58-1.58,2.78-3.44,3.63-5.58.84-2.14,1.27-4.43,1.27-6.88,0-1.98-.32-3.78-.96-5.42ZM360.64,49.37c-.33.97-.81,1.83-1.41,2.58-.61.75-1.36,1.35-2.21,1.8-.87.44-1.84.67-2.92.67-.89,0-1.67-.14-2.35-.42-.69-.28-1.25-.65-1.71-1.14-.46-.48-.8-1.05-1.04-1.71-.24-.65-.36-1.36-.36-2.11,0-1,.17-1.99.51-2.96.33-.97.8-1.84,1.41-2.59s1.36-1.36,2.23-1.81c.88-.46,1.86-.69,2.95-.69.86,0,1.63.14,2.31.42.68.28,1.25.66,1.71,1.15.47.48.81,1.05,1.04,1.71.24.65.36,1.36.36,2.11,0,1.03-.17,2.02-.51,3Z"/>
+          <path fill="#e97a35" d="M373.69,32.97l-1.46,8.13h7.46l-3.75,21.39h9.67l3.75-21.39h7.22l1.46-8.13h-24.35Z"/>
+        </svg>
+        <p>Professional before & after documentation for contractors. Capture, brand, share — in seconds.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 ProofShot Pro. All rights reserved.</span>
+      <span>Made for contractors, by contractors.</span>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+        // Open clicked if it wasn't open
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

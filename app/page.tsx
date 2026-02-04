@@ -1,13 +1,16 @@
-import { Navigation } from '@/components/Navigation';
-import { Hero } from '@/components/Hero';
-import { Stats } from '@/components/Stats';
-import { ValueProps } from '@/components/ValueProps';
-import { Features } from '@/components/Features';
-import { Testimonials } from '@/components/Testimonials';
-import { Pricing } from '@/components/Pricing';
-import { FAQ } from '@/components/FAQ';
-import { CTA } from '@/components/CTA';
-import { Footer } from '@/components/Footer';
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import {
+  Hero,
+  SocialProofBar,
+  ValueProps,
+  AppShowcaseCapture,
+  AppShowcaseReports,
+  AppShowcaseMarketing,
+  PricingPreview,
+  FAQ,
+  FinalCTA,
+} from "@/components/sections";
 
 export default function Home() {
   return (
@@ -15,13 +18,14 @@ export default function Home() {
       <Navigation />
       <main id="main">
         <Hero />
-        <Stats />
+        <SocialProofBar />
         <ValueProps />
-        <Features />
-        <Testimonials />
-        <Pricing />
+        <AppShowcaseCapture />
+        <AppShowcaseReports />
+        <AppShowcaseMarketing />
+        <PricingPreview />
         <FAQ />
-        <CTA />
+        <FinalCTA />
       </main>
       <Footer />
     </>

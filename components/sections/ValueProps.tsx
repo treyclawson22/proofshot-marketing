@@ -1,0 +1,75 @@
+import { Camera, FileText, Share2, Shield } from "lucide-react";
+
+const features = [
+  {
+    icon: Camera,
+    title: "Combine in Seconds",
+    description:
+      "Add your before & after photos and create branded images. Organized by project.",
+  },
+  {
+    icon: FileText,
+    title: "Professional Reports",
+    description:
+      "Generate branded PDF reports your customers will love. Logo, details, everything.",
+  },
+  {
+    icon: Share2,
+    title: "Share Anywhere",
+    description:
+      "Email, text, or post to social with AI-generated captions and hashtags.",
+  },
+  {
+    icon: Shield,
+    title: "Protect Your Work",
+    description:
+      "Timestamped proof of completion. Never lose a payment dispute again.",
+  },
+];
+
+export function ValueProps() {
+  return (
+    <section id="features" className="py-20 lg:py-24">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl text-black uppercase tracking-tight mb-4">
+            Everything You Need
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Built for the way contractors actually work. No complicated setup,
+            no learning curve.
+          </p>
+        </div>
+
+        {/* Feature Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              {/* Screenshot placeholder */}
+              <div className="h-[180px] bg-gray-900 flex items-center justify-center">
+                <div className="text-gray-600 text-sm">Screenshot</div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-5 h-5 text-orange" />
+                </div>
+                <h3 className="font-display font-bold text-lg text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

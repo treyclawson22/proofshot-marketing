@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://proofshotpro.com"),
   title: "ProofShot Pro — Before & After Photo Documentation for Contractors",
   description:
-    "Capture professional before & after photos, generate branded PDF reports, and create marketing content in seconds. Free for contractors.",
+    "Turn your before & after photos into professional branded images, generate PDF reports, and create marketing content in seconds. Free for contractors.",
   keywords: [
     "before after photos",
     "contractor documentation",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     canonical: "https://proofshotpro.com",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
   },
 };
@@ -112,11 +112,6 @@ export default function RootLayout({
                   description: "Unlimited projects, team features",
                 },
               ],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                ratingCount: "500",
-              },
             }),
           }}
         />
