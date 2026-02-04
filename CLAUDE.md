@@ -111,12 +111,29 @@ Always use the defined tokens:
 
 Full design system in PRD Section 3.
 
-### 4. Pricing Must Include
+### 4. Free Tier Focus
 
-- **First-Month Promo:** $9.99 for new users
-- **Annual Option:** $249.99/year (30% savings)
+The site is optimized to drive free account signups. Pro upsell happens in the app.
 
-See PRD Section 5.4 for full pricing spec.
+- **Single CTA:** "Claim My Free Account" across entire site
+- **No free trials:** Full-access free tier (not time-limited)
+- **Free tier includes:** AI-powered captions, all templates, PDF reports
+- **Equal plan presentation:** No badges or featured styling on pricing cards
+- **Single button:** One CTA below all pricing cards, not on each card
+
+### 5. Pricing Reference
+
+| Plan | Price | Key Features |
+|------|-------|--------------|
+| Free | $0/mo | 5 projects/mo, 10 stored, 1 user, AI captions, all templates |
+| Pro Monthly | $29.99/mo | Unlimited projects, 100 stored, 3 users, remove branding |
+| Pro Annual | $20.83/mo ($249.99/yr) | Same as Pro, 30% savings |
+
+**Add-ons:**
+- Additional team members: $9.99/user/month
+- Additional storage: $1.99/month per 100 projects
+
+**First-Month Promo:** $9.99 for new Pro users (banner on pricing page)
 
 ---
 

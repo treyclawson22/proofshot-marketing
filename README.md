@@ -98,7 +98,9 @@ proofshotpro.com/
 - **Light theme** with warm accents
 - **Bold typography** (Inter Tight 900 for headlines)
 - **Product-centric**: App screenshots are the hero
-- **Single CTA focus**: Drive free trial signups
+- **Free tier focus**: Single CTA "Claim My Free Account" drives signups
+- **No free trials**: Full-access free tier, Pro upsell in app
+- **Single CTA focus**: Drive free account signups
 - **Authentic**: No fake social proof or testimonials
 
 ---
@@ -234,11 +236,15 @@ Located in `public/logos/`:
 
 ## Pricing Reference
 
-| Plan | Price | Users | Projects |
-|------|-------|-------|----------|
-| Free | $0 | 1 | 5/month, 10 stored |
-| Pro Monthly | $29.99/mo | 3 | Unlimited, 100 stored |
-| Pro Annual | $249.99/yr | 3 | Unlimited, 100 stored |
+| Plan | Price | Users | Projects | Notes |
+|------|-------|-------|----------|-------|
+| Free | $0/mo | 1 | 5/month, 10 stored | Includes AI captions, all templates |
+| Pro Monthly | $29.99/mo | 3 | Unlimited, 100 stored | Remove branding, priority support |
+| Pro Annual | $20.83/mo | 3 | Unlimited, 100 stored | $249.99/yr, 30% savings |
+
+**Add-ons:**
+- Additional team members: $9.99/user/month
+- Additional storage: $1.99/month per 100 projects
 
 See PRD_WEBSITE_V3.md Section 5.4 for full pricing page spec.
 
@@ -341,6 +347,14 @@ The site should NOT include fabricated statistics or testimonials:
 
 These can be added later with real data. See PRD_WEBSITE_V3.md Section 5.2 for alternatives.
 
+### Free Tier Strategy
+
+The site focuses on getting users to create free accounts. Key points:
+- **CTA:** "Claim My Free Account" used everywhere
+- **No free trials:** Free tier has full access to core features forever
+- **Free includes:** AI-powered captions, all templates, PDF reports
+- **Upsell in app:** Pro upgrade happens after signup, not on marketing site
+
 ### First-Month Promo
 
-New users get first month of Pro for $9.99. Include promo banner on pricing page.
+New users get first month of Pro for $9.99. Include promo banner on pricing page (informational only).
