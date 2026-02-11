@@ -1,10 +1,9 @@
+import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
-import { BeforeAfterGallery } from "@/components/sections";
-import { getIndustry } from "@/lib/industries";
+import { ValueProps } from "@/components/sections";
 import {
-  Check,
   DollarSign,
   TrendingUp,
   Clock,
@@ -129,29 +128,52 @@ export default function OwnerOperatorPage() {
         <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-24">
           {/* Background gradient - extends behind nav */}
           <div className="absolute inset-0 bg-gradient-to-b from-orange-light/50 to-white" />
-          <div className="relative max-w-[1000px] mx-auto px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-orange text-white px-4 py-2 rounded-full text-sm font-bold uppercase mb-6">
-              <Users className="w-4 h-4" />
-              For Solo & Small Operators
-            </div>
-            <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-black uppercase tracking-tight mb-6">
-              Professional Documentation
-              <br />
-              <span className="text-orange">Without the Enterprise Price</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-2xl mx-auto">
-              Finally, a photo documentation app that&apos;s actually priced for owner operators and small crews.
-            </p>
-            <p className="text-lg text-gray-500 mb-8">
-              Free to start. Pro for just <span className="text-orange font-bold">$29.99/month</span>. No per-seat nonsense.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="https://app.proofshotpro.com/signup" showArrow>
-                Claim My Free Account
-              </Button>
-              <Button href="/pricing" variant="outline">
-                See Pricing
-              </Button>
+          <div className="relative max-w-[1200px] mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Text Content */}
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 bg-orange text-white px-4 py-2 rounded-full text-sm font-bold uppercase mb-6">
+                  <Users className="w-4 h-4" />
+                  For Solo & Small Operators
+                </div>
+                <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-black uppercase tracking-tight mb-6">
+                  Professional Documentation
+                  <br />
+                  <span className="text-orange">Without the Enterprise Price</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-600 mb-4">
+                  Finally, a photo documentation app that&apos;s actually priced for owner operators and small crews.
+                </p>
+                <p className="text-lg text-gray-500 mb-8">
+                  Free to start. Pro for just <span className="text-orange font-bold">$29.99/month</span>. No per-seat nonsense.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Button href="https://app.proofshotpro.com/signup" showArrow>
+                    Claim My Free Account
+                  </Button>
+                  <Button href="/pricing" variant="outline">
+                    See Pricing
+                  </Button>
+                </div>
+              </div>
+
+              {/* Phone Mockup */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="phone-mockup">
+                  <div className="phone-screen">
+                    <div className="phone-notch" />
+                    <div className="flex-1 bg-gray-900 overflow-hidden">
+                      <Image
+                        src="/screenshots/project-overview.png"
+                        alt="ProofShot Pro app showing a completed project"
+                        width={280}
+                        height={607}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -337,54 +359,8 @@ export default function OwnerOperatorPage() {
           </div>
         </section>
 
-        {/* Features Quick List */}
-        <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-[800px] mx-auto px-6 lg:px-8">
-            <h2 className="font-display font-extrabold text-2xl md:text-3xl text-black uppercase tracking-tight mb-8 text-center">
-              Everything You Need, Nothing You Don&apos;t
-            </h2>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Before & after photos",
-                "A growing library of templates",
-                "Your branding on every project",
-                "PDF reports",
-                "AI-generated captions",
-                "Social media sharing",
-                "Timestamped documentation",
-                "Works on any smartphone",
-                "No contracts, cancel anytime",
-              ].map((feature) => (
-                <div key={feature} className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-10">
-              <Link
-                href="/features"
-                className="text-orange hover:text-orange-hover font-medium"
-              >
-                See all features →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Before & After Gallery */}
-        {(() => {
-          const industry = getIndustry("owner-operator");
-          return industry?.gallery && industry.gallery.length > 0 ? (
-            <BeforeAfterGallery
-              title="Owner Operator Before & Afters"
-              pairs={industry.gallery}
-              industryName="Owner Operators"
-            />
-          ) : null;
-        })()}
+        {/* Everything You Need */}
+        <ValueProps />
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-orange-light/30 to-orange-light/50">
