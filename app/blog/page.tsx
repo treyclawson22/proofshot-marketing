@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { getAllBlogPosts, getFeaturedPost } from "@/lib/blog";
@@ -49,9 +50,21 @@ export default function BlogPage() {
                 className="block bg-gray-900 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow group"
               >
                 <div className="grid md:grid-cols-2">
-                  {/* Image Placeholder */}
-                  <div className="bg-gray-800 aspect-video md:aspect-auto flex items-center justify-center">
-                    <span className="text-gray-500">Featured Image</span>
+                  {/* Featured Image */}
+                  <div className="bg-gray-800 aspect-video md:aspect-auto overflow-hidden">
+                    {featuredPost.image ? (
+                      <Image
+                        src={featuredPost.image}
+                        alt={featuredPost.title}
+                        width={500}
+                        height={300}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-gray-500">Featured Image</span>
+                      </div>
+                    )}
                   </div>
                   {/* Content */}
                   <div className="p-6 lg:p-8 flex flex-col justify-center">
@@ -98,9 +111,21 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all group"
                 >
-                  {/* Image Placeholder */}
-                  <div className="bg-gray-100 aspect-video flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Post Image</span>
+                  {/* Post Image */}
+                  <div className="bg-gray-100 aspect-video overflow-hidden">
+                    {post.image ? (
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        width={400}
+                        height={225}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-gray-400 text-sm">Post Image</span>
+                      </div>
+                    )}
                   </div>
                   {/* Content */}
                   <div className="p-5">

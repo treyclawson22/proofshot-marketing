@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
@@ -232,11 +233,23 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Featured Image Placeholder */}
+        {/* Featured Image */}
         <section className="pb-12">
           <div className="max-w-[900px] mx-auto px-6 lg:px-8">
-            <div className="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center">
-              <span className="text-gray-400">Featured Image</span>
+            <div className="bg-gray-100 rounded-2xl aspect-video overflow-hidden">
+              {post.image ? (
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={900}
+                  height={506}
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-gray-400">Featured Image</span>
+                </div>
+              )}
             </div>
           </div>
         </section>

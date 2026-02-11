@@ -11,6 +11,7 @@ export interface BlogPost {
   publishedAt: string;
   readTime: string;
   featured?: boolean;
+  image?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -58,6 +59,7 @@ With ProofShot Pro, you can turn your before and after photos into branded, prof
     publishedAt: "2026-01-15",
     readTime: "4 min read",
     featured: true,
+    image: "/blog/how-to-take-better-before-after-photos.png",
   },
   {
     slug: "5-ways-before-after-photos-get-more-customers",
@@ -105,6 +107,7 @@ The key is making documentation effortless. That's why we built ProofShot Pro â€
     },
     publishedAt: "2026-01-10",
     readTime: "5 min read",
+    image: "/blog/5-ways-before-after-photos-get-more-customers.png",
   },
   {
     slug: "complete-guide-documenting-your-work",
@@ -157,6 +160,7 @@ Don't let another job go undocumented. [Try ProofShot Pro free](https://app.proo
     },
     publishedAt: "2026-01-05",
     readTime: "6 min read",
+    image: "/blog/complete-guide-documenting-your-work.jpg",
   },
 ];
 

@@ -126,17 +126,19 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                   </li>
                 </ul>
               </div>
-              <div className="phone-mockup">
-                <div className="phone-screen">
-                  <div className="phone-notch" />
-                  <div className="flex-1 bg-gray-900 overflow-hidden">
-                    <Image
-                      src={`/screenshots/industry-${industry.slug}.png`}
-                      alt={`ProofShot Pro app showing a ${industry.name.toLowerCase()} project`}
-                      width={280}
-                      height={607}
-                      className="w-full h-full object-cover object-top"
-                    />
+              <div className="flex justify-center lg:justify-end">
+                <div className="phone-mockup">
+                  <div className="phone-screen">
+                    <div className="phone-notch" />
+                    <div className="flex-1 bg-gray-900 overflow-hidden">
+                      <Image
+                        src={`/screenshots/industry-${industry.slug}.png`}
+                        alt={`ProofShot Pro app showing a ${industry.name.toLowerCase()} project`}
+                        width={280}
+                        height={607}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,29 +149,54 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
         {/* Use Cases Section */}
         <section className="py-16 lg:py-20">
           <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-black uppercase tracking-tight mb-4">
-                How {industry.name} Pros Use ProofShot
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl text-black uppercase tracking-tight mb-4">
+                Everything You Need for {industry.name}
               </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Built for the way {industry.name.toLowerCase()} professionals actually work. No complicated setup, no learning curve.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {industry.useCases.map((useCase, index) => {
                 const icons = [Camera, FileText, Share2, Shield];
+                const screenshots = [
+                  "/screenshots/template-selection.png",
+                  "/screenshots/pdf-preview.png",
+                  "/screenshots/share-screen.png",
+                  "/screenshots/project-overview.png",
+                ];
                 const Icon = icons[index % icons.length];
 
                 return (
                   <div
                     key={index}
-                    className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 hover:border-gray-300 hover:shadow-lg transition-all"
+                    className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-orange-light flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-orange" />
+                    {/* Screenshot */}
+                    <div className="h-[180px] bg-gray-900 overflow-hidden">
+                      <Image
+                        src={screenshots[index % screenshots.length]}
+                        alt={`${useCase.title} screenshot`}
+                        width={400}
+                        height={180}
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
-                    <h3 className="font-display font-bold text-lg text-gray-900 mb-3">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-600">{useCase.description}</p>
+
+                    {/* Content */}
+                    <div className="p-6">
+                      <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mb-4">
+                        <Icon className="w-5 h-5 text-orange" />
+                      </div>
+                      <h3 className="font-display font-bold text-lg text-gray-900 mb-2">
+                        {useCase.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {useCase.description}
+                      </p>
+                    </div>
                   </div>
                 );
               })}
