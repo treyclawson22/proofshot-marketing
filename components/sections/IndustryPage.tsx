@@ -137,7 +137,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                         width={280}
                         height={607}
                         className="w-full h-full object-cover"
-                        style={{ objectPosition: "center 12%" }}
+                        style={{ objectPosition: "center 10%" }}
                       />
                     </div>
                   </div>
@@ -183,7 +183,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                         width={400}
                         height={180}
                         className="w-full h-full object-cover"
-                        style={{ objectPosition: "center 12%" }}
+                        style={{ objectPosition: "center 10%" }}
                       />
                     </div>
 
