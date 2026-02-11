@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     siteName: "ProofShot Pro",
     type: "website",
   },
+  alternates: {
+    canonical: "https://proofshotpro.com/features",
+  },
 };
 
 // Feature data
@@ -207,17 +210,20 @@ export default function FeaturesPage() {
                   </div>
 
                   {/* Screenshot/Illustration */}
-                  <div className={isReversed ? "lg:col-start-1" : ""}>
+                  <div className={`${isReversed ? "lg:col-start-1" : ""} flex justify-center ${isReversed ? "lg:justify-start" : "lg:justify-end"}`}>
                     {feature.screenshot ? (
-                      <div className="bg-gray-900 rounded-3xl p-4 shadow-xl">
-                        <div className="rounded-2xl overflow-hidden max-w-[280px] mx-auto">
-                          <Image
-                            src={feature.screenshot}
-                            alt={`${feature.title} screenshot`}
-                            width={280}
-                            height={607}
-                            className="w-full h-auto"
-                          />
+                      <div className={`phone-mockup ${isReversed ? "phone-mockup-flipped" : ""}`}>
+                        <div className="phone-screen">
+                          <div className="phone-notch" />
+                          <div className="flex-1 bg-gray-900 overflow-hidden">
+                            <Image
+                              src={feature.screenshot}
+                              alt={`${feature.title} screenshot`}
+                              width={280}
+                              height={607}
+                              className="w-full h-full object-cover object-top"
+                            />
+                          </div>
                         </div>
                       </div>
                     ) : (
