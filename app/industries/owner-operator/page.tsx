@@ -345,7 +345,7 @@ export default function OwnerOperatorPage() {
           </div>
         </section>
 
-        {/* Testimonial Placeholder */}
+        {/* Testimonial Placeholder — hidden until real testimonials are available
         <section className="py-16 lg:py-20">
           <div className="max-w-[700px] mx-auto px-6 lg:px-8 text-center">
             <div className="bg-orange-light/50 rounded-2xl p-8 lg:p-12">
@@ -358,6 +358,7 @@ export default function OwnerOperatorPage() {
             </div>
           </div>
         </section>
+        */}
 
         {/* Everything You Need */}
         <ValueProps />
