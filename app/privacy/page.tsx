@@ -31,7 +31,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="text-gray-600">
-              Last updated: January 2026
+              Last updated: February 2026
             </p>
           </div>
         </section>
@@ -148,15 +148,15 @@ export default function PrivacyPage() {
                   </a>.
                 </li>
                 <li>
-                  <strong>Google Analytics:</strong> For website analytics. See{" "}
-                  <a href="https://policies.google.com/privacy" className="text-orange hover:text-orange-hover" target="_blank" rel="noopener noreferrer">
-                    Google&apos;s Privacy Policy
+                  <strong>PostHog:</strong> For product analytics (cookieless, no personal data stored). See{" "}
+                  <a href="https://posthog.com/privacy" className="text-orange hover:text-orange-hover" target="_blank" rel="noopener noreferrer">
+                    PostHog&apos;s Privacy Policy
                   </a>.
                 </li>
                 <li>
-                  <strong>OpenAI:</strong> For AI-powered caption generation. Your photos are processed but not stored by OpenAI. See{" "}
-                  <a href="https://openai.com/privacy" className="text-orange hover:text-orange-hover" target="_blank" rel="noopener noreferrer">
-                    OpenAI&apos;s Privacy Policy
+                  <strong>Anthropic (Claude):</strong> For AI-powered caption generation. Photo descriptions are processed via the Claude API but not stored or used for model training. See{" "}
+                  <a href="https://www.anthropic.com/privacy" className="text-orange hover:text-orange-hover" target="_blank" rel="noopener noreferrer">
+                    Anthropic&apos;s Privacy Policy
                   </a>.
                 </li>
               </ul>
@@ -224,8 +224,8 @@ export default function PrivacyPage() {
               </ul>
               <p className="text-gray-600 mb-6">
                 To exercise these rights, contact us at{" "}
-                <a href="mailto:privacy@proofshotpro.com" className="text-orange hover:text-orange-hover">
-                  privacy@proofshotpro.com
+                <a href="mailto:support@proofshotpro.com" className="text-orange hover:text-orange-hover">
+                  support@proofshotpro.com
                 </a>.
               </p>
 
@@ -288,8 +288,8 @@ export default function PrivacyPage() {
                 <p className="text-gray-900 font-medium mb-2">ProofShot Pro</p>
                 <p className="text-gray-600">
                   Email:{" "}
-                  <a href="mailto:privacy@proofshotpro.com" className="text-orange hover:text-orange-hover">
-                    privacy@proofshotpro.com
+                  <a href="mailto:support@proofshotpro.com" className="text-orange hover:text-orange-hover">
+                    support@proofshotpro.com
                   </a>
                 </p>
                 <p className="text-gray-600">
