@@ -241,6 +241,7 @@ public/
 ### Phase 4: Polish
 - [x] Performance optimization (Next.js Image, static generation)
 - [x] Accessibility audit (focus states, skip link, ARIA, form labels)
+- [x] Screenshot card refinements (11.5% top crop, inline icon with title)
 - [ ] Real app screenshots (placeholders in place)
 - [ ] Real testimonials (when available)
 
