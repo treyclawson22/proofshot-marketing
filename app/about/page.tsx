@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
@@ -68,31 +69,38 @@ export default function AboutPage() {
               The Story
             </h2>
 
-            <div className="grid md:grid-cols-[200px_1fr] gap-8 items-start">
-              {/* Photo Placeholder */}
-              <div className="bg-gray-200 rounded-2xl aspect-square w-48 mx-auto md:mx-0 flex items-center justify-center">
-                <span className="text-gray-400 text-sm">Founder Photo</span>
+            <div className="grid md:grid-cols-[240px_1fr] gap-8 items-start">
+              {/* Founders Photo */}
+              <div className="rounded-2xl overflow-hidden w-60 mx-auto md:mx-0">
+                <Image
+                  src="/founders.jpg"
+                  alt="Trey and Daniel, founders of ProofShot Pro"
+                  width={240}
+                  height={240}
+                  className="w-full h-auto object-cover"
+                />
               </div>
 
               {/* Story */}
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  As the owner of multiple service businesses — Reliant Pest Management,
-                  J Calvin Pressure Washing, and Brighthouse Christmas Lights — I lived
-                  the problem every day.
+                  We&apos;re Trey and Daniel — founders of J Calvin Pressure Washing
+                  out of Tomball, TX. Since 2022 we&apos;ve been running crews, quoting
+                  jobs, and growing our business from the ground up.
                 </p>
                 <p>
-                  My crews would finish amazing work, but we had nothing to show for it.
-                  No photos. No proof. No content for social media. And when a customer
-                  questioned whether we actually did the work? Nothing but our word.
+                  We lived the problem every day. Our crews would finish amazing work,
+                  but we had nothing to show for it. No photos. No proof. No content
+                  for social media. And when a customer questioned whether we actually
+                  did the work? Nothing but our word.
                 </p>
                 <p>
-                  Existing apps were either too complicated (designed for construction
-                  project management, not quick job documentation) or too basic (just
-                  a camera app with no branding or sharing).
+                  Existing apps were either too complicated — designed for enterprise
+                  project management, not quick job documentation — or too basic, just
+                  a camera app with no branding or sharing.
                 </p>
                 <p>
-                  So I built what I needed: a simple app where my guys could take a
+                  So we built what we needed: a simple app where our guys could take a
                   before photo, do the job, take an after, and instantly turn those
                   photos into a branded, professional image ready to share in 30 seconds.
                 </p>
@@ -102,8 +110,8 @@ export default function AboutPage() {
 
             {/* Signature */}
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <p className="font-display font-bold text-gray-900">— Trey</p>
-              <p className="text-gray-500">Founder</p>
+              <p className="font-display font-bold text-gray-900">— Trey &amp; Daniel</p>
+              <p className="text-gray-500">Co-Founders</p>
             </div>
           </div>
         </section>
