@@ -136,7 +136,8 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                         alt={`ProofShot Pro app showing a ${industry.name.toLowerCase()} project`}
                         width={280}
                         height={607}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover"
+                        style={{ objectPosition: "center 15%" }}
                       />
                     </div>
                   </div>
@@ -181,7 +182,8 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                         alt={`${useCase.title} screenshot`}
                         width={400}
                         height={180}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover"
+                        style={{ objectPosition: "center 15%" }}
                       />
                     </div>
 
