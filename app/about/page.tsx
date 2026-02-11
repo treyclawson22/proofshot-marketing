@@ -69,43 +69,61 @@ export default function AboutPage() {
               The Story
             </h2>
 
-            <div className="grid md:grid-cols-[240px_1fr] gap-8 items-start">
-              {/* Founders Photo */}
-              <div className="rounded-2xl overflow-hidden w-60 mx-auto md:mx-0">
+            {/* Founders Photos */}
+            <div className="grid grid-cols-3 gap-3 mb-8">
+              <div className="rounded-2xl overflow-hidden aspect-square">
                 <Image
                   src="/founders.jpg"
                   alt="Trey and Daniel, founders of ProofShot Pro"
-                  width={240}
-                  height={240}
-                  className="w-full h-auto object-cover"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
                 />
               </div>
-
-              {/* Story */}
-              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
-                <p>
-                  We&apos;re Trey and Daniel — founders of J Calvin Pressure Washing
-                  out of Tomball, TX. Since 2022 we&apos;ve been running crews, quoting
-                  jobs, and growing our business from the ground up.
-                </p>
-                <p>
-                  We lived the problem every day. Our crews would finish amazing work,
-                  but we had nothing to show for it. No photos. No proof. No content
-                  for social media. And when a customer questioned whether we actually
-                  did the work? Nothing but our word.
-                </p>
-                <p>
-                  Existing apps were either too complicated — designed for enterprise
-                  project management, not quick job documentation — or too basic, just
-                  a camera app with no branding or sharing.
-                </p>
-                <p>
-                  So we built what we needed: a simple app where our guys could take a
-                  before photo, do the job, take an after, and instantly turn those
-                  photos into a branded, professional image ready to share in 30 seconds.
-                </p>
-                <p className="font-medium text-gray-900">That&apos;s ProofShot Pro.</p>
+              <div className="rounded-2xl overflow-hidden aspect-square">
+                <Image
+                  src="/founders-truck.jpg"
+                  alt="Trey and Daniel in the J Calvin Pressure Washing truck"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
               </div>
+              <div className="rounded-2xl overflow-hidden aspect-square">
+                <Image
+                  src="/founders-team.jpg"
+                  alt="Trey and Daniel celebrating together"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Story */}
+            <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+              <p>
+                We&apos;re Trey and Daniel — founders of J Calvin Pressure Washing
+                out of Tomball, TX. Since 2022 we&apos;ve been running crews, quoting
+                jobs, and growing our business from the ground up.
+              </p>
+              <p>
+                We lived the problem every day. Our crews would finish amazing work,
+                but we had nothing to show for it. No photos. No proof. No content
+                for social media. And when a customer questioned whether we actually
+                did the work? Nothing but our word.
+              </p>
+              <p>
+                Existing apps were either too complicated — designed for enterprise
+                project management, not quick job documentation — or too basic, just
+                a camera app with no branding or sharing.
+              </p>
+              <p>
+                So we built what we needed: a simple app where our guys could take a
+                before photo, do the job, take an after, and instantly turn those
+                photos into a branded, professional image ready to share in 30 seconds.
+              </p>
+              <p className="font-medium text-gray-900">That&apos;s ProofShot Pro.</p>
             </div>
 
             {/* Signature */}
