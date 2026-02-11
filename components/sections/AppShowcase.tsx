@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 
 interface ShowcaseSectionProps {
@@ -6,6 +7,8 @@ interface ShowcaseSectionProps {
   features: string[];
   imagePosition: "left" | "right";
   bgColor?: string;
+  screenshot?: string;
+  screenshotAlt?: string;
 }
 
 function ShowcaseSection({
@@ -14,6 +17,8 @@ function ShowcaseSection({
   features,
   imagePosition,
   bgColor = "white",
+  screenshot,
+  screenshotAlt,
 }: ShowcaseSectionProps) {
   const isReversed = imagePosition === "left";
 
@@ -54,8 +59,20 @@ function ShowcaseSection({
             <div className="phone-mockup">
               <div className="phone-screen">
                 <div className="phone-notch" />
-                <div className="flex-1 bg-gray-900 flex items-center justify-center">
-                  <div className="text-gray-600 text-sm">Screenshot</div>
+                <div className="flex-1 bg-gray-900 overflow-hidden">
+                  {screenshot ? (
+                    <Image
+                      src={screenshot}
+                      alt={screenshotAlt || "App screenshot"}
+                      width={280}
+                      height={607}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-gray-600 text-sm">Screenshot</div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -75,9 +92,11 @@ export function AppShowcaseCapture() {
         "Add your before & after photos",
         "4 professional templates",
         "Your logo, your brand",
-        "Works offline",
+        "AI-powered captions",
       ]}
       imagePosition="right"
+      screenshot="/screenshots/capture-screen.png"
+      screenshotAlt="ProofShot Pro capture screen showing before photo added"
     />
   );
 }
@@ -95,6 +114,8 @@ export function AppShowcaseReports() {
       ]}
       imagePosition="left"
       bgColor="gray"
+      screenshot="/screenshots/pdf-preview.png"
+      screenshotAlt="ProofShot Pro PDF report preview with branding and before/after photos"
     />
   );
 }
@@ -111,6 +132,8 @@ export function AppShowcaseMarketing() {
         "Clean versions saved",
       ]}
       imagePosition="right"
+      screenshot="/screenshots/social-share.png"
+      screenshotAlt="ProofShot Pro social media screen with AI-generated caption"
     />
   );
 }

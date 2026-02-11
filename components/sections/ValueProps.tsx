@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Camera, FileText, Share2, Shield } from "lucide-react";
 
 const features = [
@@ -6,24 +7,28 @@ const features = [
     title: "Combine in Seconds",
     description:
       "Add your before & after photos and create branded images. Organized by project.",
+    screenshot: "/screenshots/template-selection.png",
   },
   {
     icon: FileText,
     title: "Professional Reports",
     description:
       "Generate branded PDF reports your customers will love. Logo, details, everything.",
+    screenshot: "/screenshots/pdf-preview.png",
   },
   {
     icon: Share2,
     title: "Share Anywhere",
     description:
       "Email, text, or post to social with AI-generated captions and hashtags.",
+    screenshot: "/screenshots/share-screen.png",
   },
   {
     icon: Shield,
     title: "Protect Your Work",
     description:
       "Timestamped proof of completion. Never lose a payment dispute again.",
+    screenshot: "/screenshots/project-overview.png",
   },
 ];
 
@@ -49,9 +54,15 @@ export function ValueProps() {
               key={feature.title}
               className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              {/* Screenshot placeholder */}
-              <div className="h-[180px] bg-gray-900 flex items-center justify-center">
-                <div className="text-gray-600 text-sm">Screenshot</div>
+              {/* Screenshot */}
+              <div className="h-[180px] bg-gray-900 overflow-hidden">
+                <Image
+                  src={feature.screenshot}
+                  alt={`${feature.title} screenshot`}
+                  width={400}
+                  height={180}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Content */}

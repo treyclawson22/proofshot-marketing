@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "../ui";
 
 export function Hero() {
@@ -48,7 +49,7 @@ export function Hero() {
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8 text-sm text-gray-500">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-green rounded-full" />
-                Works offline
+                AI-powered captions
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-green rounded-full" />
@@ -68,8 +69,14 @@ export function Hero() {
               <div className="phone-mockup">
                 <div className="phone-screen">
                   <div className="phone-notch" />
-                  <div className="flex-1 bg-gray-900 flex items-center justify-center">
-                    <div className="text-gray-500 text-sm">App Screenshot</div>
+                  <div className="flex-1 bg-gray-900 overflow-hidden">
+                    <Image
+                      src="/screenshots/project-overview.png"
+                      alt="ProofShot Pro app showing a completed before and after project"
+                      width={280}
+                      height={607}
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                 </div>
               </div>
