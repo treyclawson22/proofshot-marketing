@@ -25,9 +25,9 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
   return (
     <>
       <Navigation />
-      <main id="main" className="pt-16">
+      <main id="main">
         {/* Hero Section */}
-        <section className="py-16 lg:py-24 bg-gradient-to-b from-orange-light/50 to-white">
+        <section className="pt-32 lg:pt-40 pb-16 lg:pb-24 bg-gradient-to-b from-orange-light/50 to-white">
           <div className="max-w-[1000px] mx-auto px-6 lg:px-8 text-center">
             <p className="text-orange font-display font-bold uppercase tracking-wide mb-4">
               For {industry.name} Professionals

@@ -50,9 +50,9 @@ export default function AboutPage() {
   return (
     <>
       <Navigation />
-      <main id="main" className="pt-16">
+      <main id="main">
         {/* Hero Section */}
-        <section className="py-16 lg:py-24">
+        <section className="pt-32 lg:pt-40 pb-16 lg:pb-24">
           <div className="max-w-[900px] mx-auto px-6 lg:px-8 text-center">
             <p className="text-orange font-display font-bold uppercase tracking-wide mb-4">
               About ProofShot Pro

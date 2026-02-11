@@ -87,9 +87,9 @@ export default function PricingPage() {
   return (
     <>
       <Navigation />
-      <main id="main" className="pt-16">
+      <main id="main">
         {/* Hero Section */}
-        <section className="py-16 lg:py-20">
+        <section className="pt-32 lg:pt-36 pb-16 lg:pb-20">
           <div className="max-w-[1200px] mx-auto px-6 lg:px-8 text-center">
             <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-black uppercase tracking-tight mb-4">
               Simple, Transparent Pricing

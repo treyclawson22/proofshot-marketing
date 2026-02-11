@@ -23,9 +23,9 @@ export default function PrivacyPage() {
   return (
     <>
       <Navigation />
-      <main id="main" className="pt-16">
+      <main id="main">
         {/* Hero Section */}
-        <section className="py-12 lg:py-16 bg-gray-50">
+        <section className="pt-28 lg:pt-32 pb-12 lg:pb-16 bg-gray-50">
           <div className="max-w-[800px] mx-auto px-6 lg:px-8">
             <h1 className="font-display font-black text-3xl md:text-4xl lg:text-5xl text-black uppercase tracking-tight mb-4">
               Privacy Policy

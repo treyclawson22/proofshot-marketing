@@ -151,9 +151,9 @@ export default function FeaturesPage() {
   return (
     <>
       <Navigation />
-      <main id="main" className="pt-16">
+      <main id="main">
         {/* Hero Section */}
-        <section className="py-16 lg:py-24">
+        <section className="pt-32 lg:pt-40 pb-16 lg:pb-24">
           <div className="max-w-[900px] mx-auto px-6 lg:px-8 text-center">
             <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-black uppercase tracking-tight mb-6">
               Features

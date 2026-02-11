@@ -186,7 +186,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <Navigation />
-      <main id="main" className="pt-16">
+      <main id="main">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -243,7 +243,7 @@ export default async function BlogPostPage({ params }: Props) {
           }}
         />
         {/* Breadcrumb */}
-        <section className="py-6 bg-gray-50">
+        <section className="pt-22 pb-6 bg-gray-50">
           <div className="max-w-[800px] mx-auto px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-gray-500">
               <Link href="/blog" className="hover:text-orange transition-colors flex items-center gap-1">
