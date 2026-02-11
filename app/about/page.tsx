@@ -38,7 +38,7 @@ const values = [
   {
     icon: Smartphone,
     title: "Built for the field",
-    description: "Offline-first. Big buttons. One-handed operation.",
+    description: "Big buttons. One-handed operation. Works on any phone.",
   },
 ];
 

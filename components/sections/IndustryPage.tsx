@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
+import { BeforeAfterGallery } from "./BeforeAfterGallery";
 import { Industry, getRelatedIndustries } from "@/lib/industries";
 import {
   AlertTriangle,
@@ -119,16 +121,20 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                       <Check className="w-4 h-4 text-green" />
                     </div>
                     <span className="text-gray-700">
-                      <strong>Works offline</strong> — perfect for job sites without service
+                      <strong>AI-powered captions</strong> — describe your work automatically
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gray-900 rounded-3xl p-4 shadow-xl">
-                <div className="bg-gray-800 rounded-2xl aspect-[9/16] max-w-[280px] mx-auto flex items-center justify-center">
-                  <span className="text-gray-500 text-sm text-center px-4">
-                    {industry.name} example screenshot
-                  </span>
+                <div className="rounded-2xl overflow-hidden max-w-[280px] mx-auto">
+                  <Image
+                    src="/screenshots/project-overview.png"
+                    alt={`ProofShot Pro app showing a ${industry.name.toLowerCase()} project`}
+                    width={280}
+                    height={607}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -168,30 +174,14 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
           </div>
         </section>
 
-        {/* Example Gallery Placeholder */}
-        <section className="py-16 lg:py-20 bg-gray-50">
-          <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-display font-extrabold text-2xl md:text-3xl lg:text-4xl text-black uppercase tracking-tight mb-4">
-                {industry.name} Before & Afters
-              </h2>
-              <p className="text-lg text-gray-600">
-                See what&apos;s possible with ProofShot Pro.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div
-                  key={i}
-                  className="bg-gray-200 rounded-xl aspect-[4/3] flex items-center justify-center"
-                >
-                  <span className="text-gray-400 text-sm">Example {i}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Before & After Gallery */}
+        {industry.gallery && industry.gallery.length > 0 && (
+          <BeforeAfterGallery
+            title={`${industry.name} Before & Afters`}
+            pairs={industry.gallery}
+            industryName={industry.name}
+          />
+        )}
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-orange-light/30 to-orange-light/50">

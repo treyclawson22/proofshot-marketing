@@ -1,6 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
+import { BeforeAfterGallery } from "@/components/sections";
+import { getIndustry } from "@/lib/industries";
 import {
   Check,
   DollarSign,
@@ -89,7 +91,7 @@ const roi = [
   },
   {
     scenario: "One new customer from social",
-    value: "$200+",
+    value: "$350+",
     description: "Before/after posts attract new customers without ad spend",
   },
   {
@@ -345,8 +347,7 @@ export default function OwnerOperatorPage() {
                 "4 professional templates",
                 "Your logo on every image",
                 "PDF reports",
-                "AI-generated captions (Pro)",
-                "Offline mode",
+                "AI-generated captions",
                 "Social media sharing",
                 "Timestamped documentation",
                 "Works on any smartphone",
@@ -369,6 +370,18 @@ export default function OwnerOperatorPage() {
             </div>
           </div>
         </section>
+
+        {/* Before & After Gallery */}
+        {(() => {
+          const industry = getIndustry("owner-operator");
+          return industry?.gallery && industry.gallery.length > 0 ? (
+            <BeforeAfterGallery
+              title="Owner Operator Before & Afters"
+              pairs={industry.gallery}
+              industryName="Owner Operators"
+            />
+          ) : null;
+        })()}
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-orange-light/30 to-orange-light/50">

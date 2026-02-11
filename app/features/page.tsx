@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui";
@@ -9,7 +10,6 @@ import {
   Sparkles,
   Users,
   Share2,
-  WifiOff,
   Check,
   X,
 } from "lucide-react";
@@ -91,7 +91,6 @@ const features = [
     icon: Sparkles,
     title: "AI Captions",
     headline: "AI WRITES YOUR MARKETING",
-    badge: "Pro",
     description:
       "Let AI write engaging social media captions for your work. Automatically generates descriptions and industry-specific hashtags optimized for each platform.",
     points: [
@@ -130,20 +129,6 @@ const features = [
     ],
     screenshot: "/screenshots/share-screen.png",
   },
-  {
-    icon: WifiOff,
-    title: "Offline Mode",
-    headline: "WORKS WITHOUT INTERNET",
-    description:
-      "Full functionality even without cell service. Add photos, create projects, and generate images offline. Everything syncs automatically when you're back online.",
-    points: [
-      "Full offline functionality",
-      "Auto-sync when connected",
-      "Never lose your work",
-      "Perfect for job sites",
-    ],
-    screenshot: null,
-  },
 ];
 
 // Comparison data
@@ -154,8 +139,7 @@ const comparisonFeatures = [
   { name: "Before/after photos", free: true, pro: true },
   { name: "All 4 templates", free: true, pro: true },
   { name: "PDF reports", free: true, pro: true },
-  { name: "Offline mode", free: true, pro: true },
-  { name: "AI captions", free: false, pro: true },
+  { name: "AI captions", free: true, pro: true },
   { name: "Remove branding", free: false, pro: true },
   { name: "Priority support", free: false, pro: true },
 ];
@@ -226,10 +210,14 @@ export default function FeaturesPage() {
                   <div className={isReversed ? "lg:col-start-1" : ""}>
                     {feature.screenshot ? (
                       <div className="bg-gray-900 rounded-3xl p-4 shadow-xl">
-                        <div className="bg-gray-800 rounded-2xl aspect-[9/16] max-w-[280px] mx-auto flex items-center justify-center">
-                          <span className="text-gray-500 text-sm">
-                            Screenshot: {feature.title}
-                          </span>
+                        <div className="rounded-2xl overflow-hidden max-w-[280px] mx-auto">
+                          <Image
+                            src={feature.screenshot}
+                            alt={`${feature.title} screenshot`}
+                            width={280}
+                            height={607}
+                            className="w-full h-auto"
+                          />
                         </div>
                       </div>
                     ) : (

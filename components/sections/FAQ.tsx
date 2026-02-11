@@ -10,11 +10,6 @@ const faqs = [
       "ProofShot is a Progressive Web App that works on any modern smartphone or tablet. Install it directly from your browser — no app store needed. Works on iPhone, Android, iPad, and desktop.",
   },
   {
-    question: "Does it work offline?",
-    answer:
-      "Yes! Add photos and create projects without internet. Everything syncs automatically when you're back online. Perfect for job sites with spotty service.",
-  },
-  {
     question: "Can I use my own logo?",
     answer:
       "Absolutely. Upload your logo once in settings, and it's automatically applied to every before/after image and PDF report. You can even adjust the size and position.",

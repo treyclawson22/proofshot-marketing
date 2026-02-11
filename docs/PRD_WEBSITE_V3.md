@@ -553,7 +553,7 @@ Capture, brand, share — in 30 seconds.
 
 > **IMPORTANT:** Do NOT include fake stats like "10,000+ Contractors" or "500K+ Photos". 
 > These can be added later with real data. For launch, omit entirely or use feature-based 
-> stats like "Works offline" | "Free to start" | "30-second workflow"
+> stats like "AI-powered captions" | "Free to start" | "30-second workflow"
 
 ---
 
@@ -608,7 +608,7 @@ pick a template, and you're done. Your logo is automatically applied.
 ✓ Tap to capture before & after
 ✓ 4 professional templates
 ✓ Your logo, your brand
-✓ Works offline
+✓ AI-powered captions
 
 [Screenshot: Template selection carousel]
 ```
@@ -708,10 +708,7 @@ $0/month            ★ Most Popular           Save 30%
 1. **What devices does ProofShot work on?**
    ProofShot is a Progressive Web App that works on any modern smartphone or tablet. Install it directly from your browser — no app store needed. Works on iPhone, Android, iPad, and desktop.
 
-2. **Does it work offline?**
-   Yes! Capture photos and create projects without internet. Everything syncs automatically when you're back online. Perfect for job sites with spotty service.
-
-3. **Can I use my own logo?**
+2. **Can I use my own logo?**
    Absolutely. Upload your logo once in settings, and it's automatically applied to every before/after image and PDF report. You can even adjust the size and position.
 
 4. **What's included in the free plan?**
@@ -783,7 +780,6 @@ Built for contractors. Not adapted from something else.
 | 5 | AI Captions (Pro) | Social share | Auto-generated descriptions, hashtags, platform-optimized |
 | 6 | Team Access (Pro) | (illustration) | 3 included, flat-rate pricing, add more at $9.99/user |
 | 7 | Sharing Options | Share screen | Email with PDF, text message, social media, shareable link |
-| 8 | Offline Mode | (illustration) | Full functionality offline, auto-sync, never lose work |
 
 #### Comparison Table
 
@@ -1026,7 +1022,7 @@ and get the credit they deserve.
 | **Simple over complicated** | Your time is valuable. Every feature earns its place. |
 | **Photo-first** | The work comes first. Documentation should be instant. |
 | **Fair pricing** | Flat-rate teams. No per-seat gouging. |
-| **Built for the field** | Offline-first. Big buttons. One-handed operation. |
+| **Built for the field** | Big buttons. One-handed operation. Works on any phone. |
 
 #### Contact CTA
 
@@ -1089,7 +1085,6 @@ ProofShot Pro is built specifically for before/after documentation with flat-rat
 | **Branded Comparisons** | ✓ Automatic | Limited |
 | **AI Captions** | ✓ (Pro) | ✗ |
 | **PDF Reports** | ✓ | ✓ |
-| **Offline Support** | ✓ | ✓ |
 | **Project Management** | Basic | Full-featured |
 | **Best For** | Quick documentation, marketing | Full project management |
 
@@ -1291,10 +1286,9 @@ For each industry page, need 4-6 before/after pairs:
 ### 6.3 Graphics & Icons
 
 **Icons:** Use Lucide React for consistency
-- camera, image, file-text, share-2, users, wifi-off, check, chevron-down, arrow-right, star, shield, clock, map-pin
+- camera, image, file-text, share-2, users, check, chevron-down, arrow-right, star, shield, clock, map-pin
 
 **Illustrations (optional):**
-- Offline mode concept
 - Team collaboration concept
 - Security/protection concept
 

@@ -24,9 +24,8 @@ const comparisonData = [
   { feature: "5-user team cost", proofshot: "$49.97/mo", companycam: "$137/mo" },
   { feature: "Before/After Focus", proofshot: true, companycam: "Add-on feature" },
   { feature: "Branded Comparisons", proofshot: true, companycam: "Limited" },
-  { feature: "AI Captions", proofshot: "Pro", companycam: false },
+  { feature: "AI Captions", proofshot: true, companycam: false },
   { feature: "PDF Reports", proofshot: true, companycam: true },
-  { feature: "Offline Support", proofshot: true, companycam: true },
   { feature: "Project Management", proofshot: "Basic", companycam: "Full-featured" },
   { feature: "Best For", proofshot: "Quick documentation, marketing", companycam: "Full project management" },
 ];

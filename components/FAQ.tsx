@@ -9,11 +9,6 @@ const faqs = [
       'ProofShot Pro is used by a wide range of service professionals including landscapers, painters, cleaners, plumbers, electricians, HVAC technicians, roofers, and general contractors. Anyone who wants to document their work and share proof with clients can benefit.',
   },
   {
-    question: 'Can I use ProofShot Pro offline?',
-    answer:
-      'Yes! ProofShot Pro works offline, which is perfect for job sites with poor connectivity. Your photos and project data are stored locally and automatically sync to the cloud when you reconnect to the internet.',
-  },
-  {
     question: 'How do clients view the reports I send?',
     answer:
       'Clients receive a link that opens directly in their web browser. They can view all photos, job details, and download a PDF report without installing any app. It works on any device.',
