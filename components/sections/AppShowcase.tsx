@@ -56,7 +56,7 @@ function ShowcaseSection({
               isReversed ? "lg:order-1 lg:justify-start" : "lg:justify-end"
             }`}
           >
-            <div className="phone-mockup">
+            <div className={`phone-mockup ${isReversed ? "phone-mockup-flipped" : ""}`}>
               <div className="phone-screen">
                 <div className="phone-notch" />
                 <div className="flex-1 bg-gray-900 overflow-hidden">

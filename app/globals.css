@@ -218,6 +218,14 @@ body {
   transform: perspective(1000px) rotateY(-3deg) rotateX(1deg);
 }
 
+.phone-mockup-flipped {
+  transform: perspective(1000px) rotateY(6deg) rotateX(2deg);
+}
+
+.phone-mockup-flipped:hover {
+  transform: perspective(1000px) rotateY(3deg) rotateX(1deg);
+}
+
 .phone-screen {
   position: relative;
   width: 100%;
@@ -283,11 +291,13 @@ body {
     scroll-behavior: auto !important;
   }
 
-  .phone-mockup {
+  .phone-mockup,
+  .phone-mockup-flipped {
     transform: none;
   }
 
-  .phone-mockup:hover {
+  .phone-mockup:hover,
+  .phone-mockup-flipped:hover {
     transform: none;
   }
 }
@@ -316,13 +326,15 @@ body {
 
 /* ==================== RESPONSIVE UTILITIES ==================== */
 @media (max-width: 1024px) {
-  .phone-mockup {
+  .phone-mockup,
+  .phone-mockup-flipped {
     transform: none;
     width: 270px;
     height: 560px;
   }
 
-  .phone-mockup:hover {
+  .phone-mockup:hover,
+  .phone-mockup-flipped:hover {
     transform: none;
   }
 }
