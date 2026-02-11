@@ -54,7 +54,7 @@ export function ValueProps() {
               key={feature.title}
               className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              {/* Screenshot with gradient fade */}
+              {/* Screenshot + Content with gradient fade */}
               <div className="relative">
                 <div className="h-[180px] bg-gray-900 overflow-hidden">
                   <Image
@@ -66,14 +66,19 @@ export function ValueProps() {
                     style={{ objectPosition: "center 10%" }}
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-white" />
+
+                <div className="px-6 pt-2">
+                  <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-5 h-5 text-orange" />
+                  </div>
+                </div>
+
+                {/* Gradient: starts in screenshot, ends just below icon */}
+                <div className="absolute bottom-0 left-0 right-0 h-[120px] bg-gradient-to-b from-transparent to-white pointer-events-none" />
               </div>
 
               {/* Content */}
-              <div className="px-6 pb-6 pt-2">
-                <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-5 h-5 text-orange" />
-                </div>
+              <div className="px-6 pb-6">
                 <h3 className="font-display font-bold text-lg text-gray-900 mb-2">
                   {feature.title}
                 </h3>
