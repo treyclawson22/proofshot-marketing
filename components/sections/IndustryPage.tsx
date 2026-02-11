@@ -204,14 +204,14 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
           </div>
         </section>
 
-        {/* Before & After Gallery */}
-        {industry.gallery && industry.gallery.length > 0 && (
+        {/* Before & After Gallery — hidden for now, will re-enable later */}
+        {/* {industry.gallery && industry.gallery.length > 0 && (
           <BeforeAfterGallery
             title={`${industry.name} Before & Afters`}
             pairs={industry.gallery}
             industryName={industry.name}
           />
-        )}
+        )} */}
 
         {/* CTA Section */}
         <section className="py-16 lg:py-20 bg-gradient-to-b from-white via-orange-light/30 to-orange-light/50">
