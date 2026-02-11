@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 
 type ButtonVariant = "primary" | "secondary" | "outline";
 type ButtonSize = "default" | "small";
@@ -44,6 +47,8 @@ export function Button({
       "bg-transparent text-gray-900 border-2 border-gray-200 hover:border-gray-400",
   };
 
+  const posthog = usePostHog();
+
   const disabledStyles = disabled ? "opacity-50 cursor-not-allowed" : "";
 
   const combinedClassName = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${disabledStyles} ${className}`;
@@ -57,10 +62,19 @@ export function Button({
 
   if (href) {
     const isExternal = href.startsWith("http");
+    const isSignup = href.includes("signup");
+    const handleClick = isSignup
+      ? () => {
+          posthog?.capture("signup_cta_clicked", {
+            page: window.location.pathname,
+          });
+        }
+      : undefined;
     return (
       <Link
         href={href}
         className={combinedClassName}
+        onClick={handleClick}
         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {content}

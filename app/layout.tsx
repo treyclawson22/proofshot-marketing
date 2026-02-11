@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "@/components/PostHogProvider";
+import { PostHogPageView } from "@/components/PostHogPageView";
 import "./globals.css";
 
 const inter = Inter({
@@ -144,7 +147,11 @@ export default function RootLayout({
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
-        {children}
+        <PostHogProvider>
+          <PostHogPageView />
+          {children}
+        </PostHogProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -60,6 +60,7 @@ Language:     TypeScript
 Styling:      Tailwind CSS 4
 Icons:        Lucide React
 Fonts:        Inter, Inter Tight (via next/font)
+Analytics:    PostHog, Vercel Analytics
 Hosting:      Vercel
 ```
 
@@ -205,6 +206,8 @@ components/
 │   └── index.ts
 ├── Navigation.tsx              # Multi-page nav with Industries dropdown
 ├── Footer.tsx
+├── PostHogProvider.tsx          # Analytics provider (PostHog, cookieless)
+├── PostHogPageView.tsx          # SPA pageview tracker
 └── IndustryPageTemplate.tsx    # Shared template for industry pages
 
 lib/
@@ -259,6 +262,28 @@ npm run build
 # Deploy
 vercel --prod
 ```
+
+---
+
+## Analytics
+
+**Stack:** PostHog (behavior + conversions) + Vercel Analytics (Web Vitals) + Google Search Console (SEO)
+
+**PostHog** (cookieless mode — no cookie banner):
+- Auto-captures clicks, form submissions, page views
+- Custom event: `signup_cta_clicked` fires on all signup CTA clicks
+- Session recordings and heatmaps enabled via PostHog dashboard
+- Config: `components/PostHogProvider.tsx`
+
+**Vercel Analytics:**
+- Automatically tracks Web Vitals (LCP, FID, CLS)
+- Enabled via `<Analytics />` in root layout
+- Dashboard: Vercel project → Analytics tab
+
+**Environment Variables** (required for PostHog):
+- `NEXT_PUBLIC_POSTHOG_KEY` — PostHog project API key
+- `NEXT_PUBLIC_POSTHOG_HOST` — PostHog ingest URL (`https://us.i.posthog.com`)
+- Set in `.env.local` (local) and Vercel Dashboard → Settings → Environment Variables (production)
 
 ---
 
