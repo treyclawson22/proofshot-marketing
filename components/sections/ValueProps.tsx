@@ -62,7 +62,7 @@ export function ValueProps() {
                   width={400}
                   height={220}
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: "center 9%" }}
+                  style={{ objectPosition: "center 11%" }}
                 />
               </div>
 
