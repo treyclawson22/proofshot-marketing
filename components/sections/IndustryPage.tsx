@@ -187,20 +187,19 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                       />
                     </div>
 
-                    {/* Content — pulled up over screenshot with gradient fade */}
-                    <div className="relative -mt-16 px-6 pb-6 pt-4">
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 via-[40%] to-white pointer-events-none" />
-                      <div className="relative">
-                        <div className="w-10 h-10 bg-orange/10 rounded-lg flex items-center justify-center mb-4">
-                          <Icon className="w-5 h-5 text-orange" />
+                    {/* Content */}
+                    <div className="px-6 pb-6 pt-5">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 bg-orange/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon className="w-4 h-4 text-orange" />
                         </div>
-                        <h3 className="font-display font-bold text-lg text-gray-900 mb-2">
+                        <h3 className="font-display font-bold text-lg text-gray-900">
                           {useCase.title}
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {useCase.description}
-                        </p>
                       </div>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {useCase.description}
+                      </p>
                     </div>
                   </div>
                 );
