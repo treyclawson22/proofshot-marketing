@@ -300,8 +300,20 @@ export default async function BlogPostPage({ params }: Props) {
                     href={`/blog/${relatedPost.slug}`}
                     className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all group"
                   >
-                    <div className="bg-gray-100 aspect-video flex items-center justify-center">
-                      <span className="text-gray-400 text-sm">Image</span>
+                    <div className="bg-gray-100 aspect-video overflow-hidden">
+                      {relatedPost.image ? (
+                        <Image
+                          src={relatedPost.image}
+                          alt={relatedPost.title}
+                          width={400}
+                          height={225}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-gray-400 text-sm">Image</span>
+                        </div>
+                      )}
                     </div>
                     <div className="p-4">
                       <span className="text-orange text-sm font-medium">{relatedPost.category}</span>
