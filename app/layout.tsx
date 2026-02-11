@@ -40,14 +40,6 @@ export const metadata: Metadata = {
     title: "ProofShot Pro — Document Your Work. Get Paid Faster.",
     description:
       "Before & after photos, branded PDF reports, and marketing content — all from your phone in 30 seconds.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "ProofShot Pro - Before & After Photo Documentation",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -56,7 +48,6 @@ export const metadata: Metadata = {
     title: "ProofShot Pro — Document Your Work. Get Paid Faster.",
     description:
       "Before & after photos, branded PDF reports, and marketing content — all from your phone in 30 seconds.",
-    images: ["/twitter-card.jpg"],
   },
   alternates: {
     canonical: "https://proofshotpro.com",
@@ -111,7 +102,40 @@ export default function RootLayout({
                   name: "Pro Monthly",
                   description: "Unlimited projects, team features",
                 },
+                {
+                  "@type": "Offer",
+                  price: "249.99",
+                  priceCurrency: "USD",
+                  name: "Pro Annual",
+                  description:
+                    "Unlimited projects, team features, billed annually",
+                },
               ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "ProofShot Pro",
+              url: "https://proofshotpro.com",
+              logo: "https://proofshotpro.com/logos/logo-orange-horizontal.svg",
+              description:
+                "Before & after photo documentation app for contractors",
+              email: "hello@proofshotpro.com",
+              founder: [
+                { "@type": "Person", name: "Trey" },
+                { "@type": "Person", name: "Daniel" },
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Tomball",
+                addressRegion: "TX",
+                addressCountry: "US",
+              },
             }),
           }}
         />

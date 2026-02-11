@@ -41,6 +41,23 @@ export function FAQ() {
 
   return (
     <section id="faq" className="py-20 lg:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       <div className="max-w-[700px] mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">

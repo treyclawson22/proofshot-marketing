@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     siteName: "ProofShot Pro",
     type: "website",
   },
+  alternates: {
+    canonical: "https://proofshotpro.com/compare/companycam",
+  },
 };
 
 const comparisonData = [

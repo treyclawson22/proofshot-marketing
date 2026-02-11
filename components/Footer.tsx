@@ -46,6 +46,8 @@ export function Footer() {
             </p>
             <Link
               href="https://app.proofshotpro.com/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-orange hover:text-white font-medium text-sm transition-colors"
             >
               Get Started Free →

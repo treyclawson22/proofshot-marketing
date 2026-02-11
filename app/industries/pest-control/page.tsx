@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     siteName: "ProofShot Pro",
     type: "website",
   },
+  alternates: {
+    canonical: "https://proofshotpro.com/industries/pest-control",
+  },
 };
 
 export default function PestControlPage() {

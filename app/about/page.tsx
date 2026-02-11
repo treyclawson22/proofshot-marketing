@@ -8,14 +8,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About — ProofShot Pro",
   description:
-    "Built for contractors, by a contractor. Learn the story behind ProofShot Pro and our mission to help service professionals document their work.",
+    "ProofShot Pro was founded by contractors Trey and Daniel in Tomball, TX to help service professionals document their work with branded before & after photos.",
   openGraph: {
     title: "About — ProofShot Pro",
     description:
-      "Built for contractors, by a contractor. Learn the story behind ProofShot Pro and our mission to help service professionals document their work.",
+      "ProofShot Pro was founded by contractors Trey and Daniel in Tomball, TX to help service professionals document their work with branded before & after photos.",
     url: "https://proofshotpro.com/about",
     siteName: "ProofShot Pro",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://proofshotpro.com/about",
   },
 };
 

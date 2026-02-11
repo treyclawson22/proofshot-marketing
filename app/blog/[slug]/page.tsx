@@ -164,6 +164,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.publishedAt,
       authors: [post.author.name],
     },
+    alternates: {
+      canonical: `https://proofshotpro.com/blog/${post.slug}`,
+    },
   };
 }
 
@@ -184,6 +187,61 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <Navigation />
       <main id="main" className="pt-16">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: post.title,
+              description: post.excerpt,
+              datePublished: post.publishedAt,
+              dateModified: post.publishedAt,
+              author: {
+                "@type": "Person",
+                name: post.author.name,
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "ProofShot Pro",
+                url: "https://proofshotpro.com",
+              },
+              ...(post.image
+                ? { image: `https://proofshotpro.com${post.image}` }
+                : {}),
+              mainEntityOfPage: `https://proofshotpro.com/blog/${post.slug}`,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://proofshotpro.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Blog",
+                  item: "https://proofshotpro.com/blog",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: post.title,
+                  item: `https://proofshotpro.com/blog/${post.slug}`,
+                },
+              ],
+            }),
+          }}
+        />
         {/* Breadcrumb */}
         <section className="py-6 bg-gray-50">
           <div className="max-w-[800px] mx-auto px-6 lg:px-8">
