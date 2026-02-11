@@ -183,7 +183,9 @@ app/
 ├── features/page.tsx
 ├── pricing/page.tsx
 ├── about/page.tsx
-├── contact/page.tsx
+├── contact/
+│   ├── layout.tsx              # Metadata (page is client component)
+│   └── page.tsx
 ├── industries/
 │   ├── owner-operator/page.tsx # Custom page (not template)
 │   ├── pressure-washing/page.tsx
@@ -219,6 +221,9 @@ public/
 ├── logos/
 ├── screenshots/
 └── og/
+
+.env.local                      # PostHog keys (not committed)
+.env.example                    # Template for env vars
 ```
 
 ---
@@ -247,6 +252,15 @@ public/
 - [x] Screenshot card refinements (11.5% top crop, inline icon with title)
 - [ ] Real app screenshots (placeholders in place)
 - [ ] Real testimonials (when available)
+
+### Phase 5: SEO & Analytics
+- [x] Structured data (Organization, SoftwareApplication, FAQPage, BlogPosting, BreadcrumbList)
+- [x] Canonical URLs on all pages
+- [x] Contact page metadata (via layout.tsx)
+- [x] External link security (rel="noopener noreferrer")
+- [x] Improved meta descriptions (About page)
+- [x] PostHog analytics (cookieless, autocapture, signup CTA tracking)
+- [x] Vercel Analytics (Web Vitals)
 
 ---
 

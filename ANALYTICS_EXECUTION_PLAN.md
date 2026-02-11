@@ -280,4 +280,4 @@ When a user clicks a Button that links to `app.proofshotpro.com/signup`, capture
 3. Commit all changes with message: "Add PostHog analytics and Vercel Analytics"
 4. Wait for user to confirm deploy
 
-- [ ] Step 7 complete
+- [x] Step 7 complete
