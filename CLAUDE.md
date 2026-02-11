@@ -122,7 +122,15 @@ The site is optimized to drive free account signups. Pro upsell happens in the a
 - **Equal plan presentation:** No badges or featured styling on pricing cards
 - **Single button:** One CTA below all pricing cards, not on each card
 
-### 5. Pricing Reference
+### 5. Navigation Pattern
+
+The nav bar is transparent at the top and gains `bg-white shadow-md` after 50px of scroll. To support this:
+
+- **Do NOT use `pt-16` on `<main>`** — hero sections must extend behind the nav
+- First section on each page needs extra top padding to clear the nav (e.g., `pt-32 lg:pt-36` instead of `py-16 lg:py-20`)
+- This ensures background colors (gradients, `bg-gray-50`, etc.) show through the transparent nav
+
+### 6. Pricing Reference
 
 | Plan | Price | Key Features |
 |------|-------|--------------|
