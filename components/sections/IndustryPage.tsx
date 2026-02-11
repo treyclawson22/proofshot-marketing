@@ -126,15 +126,18 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-900 rounded-3xl p-4 shadow-xl">
-                <div className="rounded-2xl overflow-hidden max-w-[280px] mx-auto">
-                  <Image
-                    src="/screenshots/project-overview.png"
-                    alt={`ProofShot Pro app showing a ${industry.name.toLowerCase()} project`}
-                    width={280}
-                    height={607}
-                    className="w-full h-auto"
-                  />
+              <div className="phone-mockup">
+                <div className="phone-screen">
+                  <div className="phone-notch" />
+                  <div className="flex-1 bg-gray-900 overflow-hidden">
+                    <Image
+                      src={`/screenshots/industry-${industry.slug}.png`}
+                      alt={`ProofShot Pro app showing a ${industry.name.toLowerCase()} project`}
+                      width={280}
+                      height={607}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
