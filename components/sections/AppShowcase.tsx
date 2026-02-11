@@ -90,7 +90,7 @@ export function AppShowcaseCapture() {
       description="No more fumbling with photo apps and editors. Add your before and after, pick a template, and you're done. Your logo is automatically applied."
       features={[
         "Add your before & after photos",
-        "4 professional templates",
+        "A growing library of templates",
         "Your logo, your brand",
         "AI-powered captions",
       ]}

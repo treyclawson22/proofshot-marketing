@@ -347,7 +347,7 @@ export default function OwnerOperatorPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               {[
                 "Before & after photos",
-                "4 professional templates",
+                "A growing library of templates",
                 "Your logo on every image",
                 "PDF reports",
                 "AI-generated captions",

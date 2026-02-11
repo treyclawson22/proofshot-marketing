@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "What's included in the free plan?",
     answer:
-      "5 projects per month, 10 stored projects max, and all core features including all 4 templates. The only limitation is ProofShot branding appears on your outputs.",
+      "5 projects per month, 10 stored projects max, and all core features including all templates. The only limitation is ProofShot branding appears on your outputs.",
   },
   {
     question: "Can I cancel anytime?",

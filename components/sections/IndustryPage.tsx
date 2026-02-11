@@ -113,7 +113,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                       <Check className="w-4 h-4 text-green" />
                     </div>
                     <span className="text-gray-700">
-                      <strong>Professional templates</strong> — 4 layouts to choose from
+                      <strong>Professional templates</strong> — a growing library of layouts
                     </span>
                   </li>
                   <li className="flex items-start gap-3">

@@ -51,11 +51,11 @@ const features = [
   {
     icon: Layout,
     title: "Professional Templates",
-    headline: "4 STUNNING LAYOUTS",
+    headline: "STUNNING LAYOUTS",
     description:
       "Choose from four professionally designed templates that make your work look incredible. Each template automatically adds before/after labels so customers know exactly what they're looking at.",
     points: [
-      "Modern, Classic, Bold, and Minimal styles",
+      "A growing library of professional styles",
       "Automatic before/after labels",
       "Consistent professional look",
       "One-tap template switching",
@@ -140,7 +140,7 @@ const comparisonFeatures = [
   { name: "Stored projects", free: "10", pro: "100" },
   { name: "Team members", free: "1", pro: "3 included" },
   { name: "Before/after photos", free: true, pro: true },
-  { name: "All 4 templates", free: true, pro: true },
+  { name: "All templates", free: true, pro: true },
   { name: "PDF reports", free: true, pro: true },
   { name: "AI captions", free: true, pro: true },
   { name: "Remove branding", free: false, pro: true },
