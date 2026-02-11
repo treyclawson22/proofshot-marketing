@@ -173,7 +173,7 @@ export default function PrivacyPage() {
                   <strong>Account Data:</strong> Retained until you delete your account.
                 </li>
                 <li>
-                  <strong>Photos and Projects:</strong> Retained according to your plan limits. Deleted projects are permanently removed within 30 days.
+                  <strong>Photos and Projects:</strong> Retained according to your plan limits. Deleted projects move to a &quot;Recently Deleted&quot; folder for 30 days where they can be restored. After 30 days they are removed from your account but retained in our database for an additional 60 days for recovery purposes, then permanently deleted.
                 </li>
                 <li>
                   <strong>Payment Records:</strong> Retained for 7 years for legal and tax compliance.
