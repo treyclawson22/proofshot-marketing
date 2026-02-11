@@ -348,7 +348,7 @@ export default function OwnerOperatorPage() {
               {[
                 "Before & after photos",
                 "A growing library of templates",
-                "Your logo on every image",
+                "Your branding on every project",
                 "PDF reports",
                 "AI-generated captions",
                 "Social media sharing",

@@ -87,11 +87,11 @@ export function AppShowcaseCapture() {
   return (
     <ShowcaseSection
       headline="From Job Site to Pro Photo in 30 Seconds"
-      description="No more fumbling with photo apps and editors. Add your before and after, pick a template, and you're done. Your logo is automatically applied."
+      description="No more fumbling with photo apps and editors. Add your before and after, pick a template, and you're done. Your branding is automatically applied."
       features={[
         "Add your before & after photos",
         "A growing library of templates",
-        "Your logo, your brand",
+        "Your branding on every project",
         "AI-powered captions",
       ]}
       imagePosition="right"

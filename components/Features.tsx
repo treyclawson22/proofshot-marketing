@@ -15,7 +15,7 @@ const showcases = [
     title: 'GENERATE PRO REPORTS',
     description: 'Turn your project photos into polished PDF reports with your company branding. Perfect for client records, invoicing, and dispute protection.',
     features: [
-      'Your logo and company info',
+      'Your company name and branding',
       'Customizable templates',
       'Job details and descriptions',
       'AI-powered captions',

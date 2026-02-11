@@ -105,7 +105,7 @@ export function IndustryPageTemplate({ industry }: IndustryPageProps) {
                       <Check className="w-4 h-4 text-green" />
                     </div>
                     <span className="text-gray-700">
-                      <strong>Your branding</strong> — logo automatically applied to every image
+                      <strong>Your branding</strong> — company info on every template and report
                     </span>
                   </li>
                   <li className="flex items-start gap-3">

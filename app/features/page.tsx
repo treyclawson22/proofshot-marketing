@@ -64,15 +64,15 @@ const features = [
   },
   {
     icon: Palette,
-    title: "Branded Watermarks",
-    headline: "YOUR LOGO ON EVERY IMAGE",
+    title: "Your Branding, Built In",
+    headline: "YOUR BRAND ON EVERY PROJECT",
     description:
-      "Upload your logo once, and it's automatically applied to every image you create. Adjustable size and positioning ensure your brand looks perfect every time.",
+      "Your company name and details appear on every template and report. Upload your logo to feature it on PDF reports and select templates. Professional branding, zero effort.",
     points: [
-      "Your logo, your brand",
-      "Adjustable size (20-100%)",
-      "Applied to main and gallery images",
-      "Professional watermark positioning",
+      "Company name on every output",
+      "Logo on PDF reports and select templates",
+      "Business details on all reports",
+      "Consistent, professional look",
     ],
     screenshot: "/screenshots/project-overview.png",
   },

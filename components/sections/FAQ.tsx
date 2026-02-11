@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Can I use my own logo?",
     answer:
-      "Absolutely. Upload your logo once in settings, and it's automatically applied to every before/after image and PDF report. You can even adjust the size and position.",
+      "Absolutely. Upload your logo once in settings, and it appears on PDF reports and select templates. Your company name and details are included on every output automatically.",
   },
   {
     question: "What's included in the free plan?",
