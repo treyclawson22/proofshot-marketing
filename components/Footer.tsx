@@ -37,8 +37,8 @@ export function Footer() {
               <Image
                 src="/logos/proofshot pro logo orange light - Horizontal.svg"
                 alt="ProofShot Pro"
-                width={80}
-                height={16}
+                width={92}
+                height={18}
               />
             </Link>
             <p className="text-sm leading-relaxed max-w-xs mb-6">
