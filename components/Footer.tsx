@@ -37,8 +37,8 @@ export function Footer() {
               <Image
                 src="/logos/proofshot pro logo orange light - Horizontal.svg"
                 alt="ProofShot Pro"
-                width={160}
-                height={32}
+                width={80}
+                height={16}
               />
             </Link>
             <p className="text-sm leading-relaxed max-w-xs mb-6">
@@ -136,7 +136,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
           <p>&copy; {new Date().getFullYear()} ProofShot Pro. All rights reserved.</p>
-          <p className="text-gray-500">Made for contractors, by contractors.</p>
+          <p className="text-gray-400">Made for contractors, by contractors.</p>
         </div>
       </div>
     </footer>

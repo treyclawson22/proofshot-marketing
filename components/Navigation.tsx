@@ -111,8 +111,8 @@ export function Navigation() {
               <Image
                 src="/logos/proofshot pro logo orange - Horizontal.svg"
                 alt="ProofShot Pro"
-                width={160}
-                height={32}
+                width={200}
+                height={40}
                 priority
               />
             </Link>
@@ -224,8 +224,8 @@ export function Navigation() {
               <Image
                 src="/logos/proofshot pro logo orange - Horizontal.svg"
                 alt="ProofShot Pro"
-                width={140}
-                height={28}
+                width={175}
+                height={35}
               />
             </Link>
             <button
