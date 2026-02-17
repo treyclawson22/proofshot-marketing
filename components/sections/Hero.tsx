@@ -74,6 +74,7 @@ export function Hero() {
                       width={280}
                       height={607}
                       priority
+                      fetchPriority="high"
                       sizes="(max-width: 768px) 250px, 280px"
                       className="w-full h-full object-cover object-top"
                     />
