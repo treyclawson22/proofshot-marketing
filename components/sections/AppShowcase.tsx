@@ -66,6 +66,7 @@ function ShowcaseSection({
                       alt={screenshotAlt || "App screenshot"}
                       width={280}
                       height={607}
+                      sizes="(max-width: 1024px) 250px, 280px"
                       className="w-full h-full object-cover object-top"
                     />
                   ) : (

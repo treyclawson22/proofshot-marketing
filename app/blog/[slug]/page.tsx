@@ -259,14 +259,14 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Post Header */}
         <section className="py-12 lg:py-16">
           <div className="max-w-[800px] mx-auto px-6 lg:px-8">
-            <span className="text-orange font-medium">{post.category}</span>
+            <span className="text-orange-dark font-medium">{post.category}</span>
             <h1 className="font-display font-black text-3xl md:text-4xl lg:text-5xl text-black tracking-tight mt-2 mb-6">
               {post.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
               <span className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-orange-light flex items-center justify-center">
-                  <span className="text-orange font-bold text-sm">
+                  <span className="text-orange-dark font-bold text-sm">
                     {post.author.name.charAt(0)}
                   </span>
                 </div>
@@ -374,7 +374,7 @@ export default async function BlogPostPage({ params }: Props) {
                       )}
                     </div>
                     <div className="p-4">
-                      <span className="text-orange text-sm font-medium">{relatedPost.category}</span>
+                      <span className="text-orange-dark text-sm font-medium">{relatedPost.category}</span>
                       <h3 className="font-display font-bold text-gray-900 mt-1 group-hover:text-orange transition-colors line-clamp-2">
                         {relatedPost.title}
                       </h3>

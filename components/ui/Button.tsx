@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { usePostHog } from "posthog-js/react";
+import { usePostHogLazy } from "../PostHogProvider";
 
 type ButtonVariant = "primary" | "secondary" | "outline";
 type ButtonSize = "default" | "small";
@@ -47,7 +47,7 @@ export function Button({
       "bg-transparent text-gray-900 border-2 border-gray-200 hover:border-gray-400",
   };
 
-  const posthog = usePostHog();
+  const posthog = usePostHogLazy();
 
   const disabledStyles = disabled ? "opacity-50 cursor-not-allowed" : "";
 

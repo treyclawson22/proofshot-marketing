@@ -109,7 +109,7 @@ export default function PricingPage() {
               <p className="text-lg font-display font-bold text-gray-900">
                 <span className="text-2xl mr-2">🎉</span>
                 NEW USER SPECIAL — First month of Pro just{" "}
-                <span className="text-orange">$9.99</span>{" "}
+                <span className="text-orange-dark">$9.99</span>{" "}
                 <span className="text-gray-500 line-through">$29.99</span>
               </p>
             </div>
@@ -142,7 +142,7 @@ export default function PricingPage() {
 
                   {/* Billed As (for Annual) */}
                   {plan.billedAs && (
-                    <p className="text-sm text-green font-medium mb-2">
+                    <p className="text-sm text-green-dark font-medium mb-2">
                       {plan.billedAs}
                     </p>
                   )}

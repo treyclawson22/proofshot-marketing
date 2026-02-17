@@ -59,7 +59,7 @@ With ProofShot Pro, you can turn your before and after photos into branded, prof
     publishedAt: "2026-01-15",
     readTime: "4 min read",
     featured: true,
-    image: "/blog/how-to-take-better-before-after-photos.png",
+    image: "/blog/how-to-take-better-before-after-photos.jpg",
   },
   {
     slug: "5-ways-before-after-photos-get-more-customers",
@@ -107,7 +107,7 @@ The key is making documentation effortless. That's why we built ProofShot Pro â€
     },
     publishedAt: "2026-01-10",
     readTime: "5 min read",
-    image: "/blog/5-ways-before-after-photos-get-more-customers.png",
+    image: "/blog/5-ways-before-after-photos-get-more-customers.jpg",
   },
   {
     slug: "complete-guide-documenting-your-work",

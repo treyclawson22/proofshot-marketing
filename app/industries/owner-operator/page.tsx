@@ -241,7 +241,7 @@ export default function OwnerOperatorPage() {
                           <h3 className="font-display font-bold text-lg text-gray-900">
                             {benefit.title}
                           </h3>
-                          <span className="px-2 py-0.5 bg-green/10 text-green text-xs font-bold rounded">
+                          <span className="px-2 py-0.5 bg-green/10 text-green-dark text-xs font-bold rounded">
                             {benefit.highlight}
                           </span>
                         </div>

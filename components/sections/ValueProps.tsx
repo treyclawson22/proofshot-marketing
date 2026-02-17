@@ -61,6 +61,7 @@ export function ValueProps() {
                   alt={`${feature.title} screenshot`}
                   width={400}
                   height={220}
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: "center 11.5%" }}
                 />

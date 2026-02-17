@@ -132,7 +132,7 @@ export default function BlogPage() {
                   </div>
                   {/* Content */}
                   <div className="p-5">
-                    <span className="text-orange text-sm font-medium">{post.category}</span>
+                    <span className="text-orange-dark text-sm font-medium">{post.category}</span>
                     <h3 className="font-display font-bold text-lg text-gray-900 mt-2 mb-2 group-hover:text-orange transition-colors line-clamp-2">
                       {post.title}
                     </h3>

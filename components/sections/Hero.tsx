@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Button } from "../ui";
 
@@ -14,7 +12,7 @@ export function Hero() {
           {/* Left: Content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-orange-light text-orange px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 bg-orange-light text-orange-dark px-4 py-2 rounded-full text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
               NEW — AI-powered captions
             </div>
@@ -75,6 +73,8 @@ export function Hero() {
                       alt="ProofShot Pro app showing a completed before and after project"
                       width={280}
                       height={607}
+                      priority
+                      sizes="(max-width: 768px) 250px, 280px"
                       className="w-full h-full object-cover object-top"
                     />
                   </div>

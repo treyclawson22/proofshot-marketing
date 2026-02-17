@@ -2,12 +2,12 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, Suspense } from "react";
-import { usePostHog } from "posthog-js/react";
+import { usePostHogLazy } from "./PostHogProvider";
 
 function PageViewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const posthog = usePostHog();
+  const posthog = usePostHogLazy();
 
   useEffect(() => {
     if (pathname && posthog) {

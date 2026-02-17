@@ -62,6 +62,7 @@ Icons:        Lucide React
 Fonts:        Inter, Inter Tight (via next/font)
 Analytics:    PostHog, Vercel Analytics
 Hosting:      Vercel
+Browsers:     Chrome 87+, Firefox 78+, Safari 14+, Edge 88+ (browserslist in package.json)
 ```
 
 ---
@@ -99,6 +100,11 @@ Always use the defined tokens:
 --orange: #E97A35
 --orange-hover: #D4682A
 --orange-light: #FEF3EB
+--orange-dark: #AE5415       /* WCAG AA text on white/light backgrounds */
+
+/* Semantic */
+--green: #10B981
+--green-dark: #059669        /* WCAG AA text on white backgrounds */
 
 /* Text */
 --black: #0A0A0A
@@ -109,6 +115,12 @@ Always use the defined tokens:
 --font-display: 'Inter Tight'  /* Headlines */
 --font-body: 'Inter'           /* Body text */
 ```
+
+**Contrast rules:**
+- Use `text-orange-dark` (not `text-orange`) for small text on white/light backgrounds
+- Use `text-green-dark` (not `text-green`) for small text on white backgrounds
+- `text-orange` is fine for icons, large/bold headings (18px+ or 14px bold+), and hover states
+- Footer text on `bg-gray-900` uses `text-gray-400` minimum (not `text-gray-500`)
 
 Full design system in PRD Section 3.
 
@@ -270,6 +282,21 @@ public/
 - [x] PostHog analytics (cookieless, autocapture, signup CTA tracking)
 - [x] Vercel Analytics (Web Vitals)
 
+### Phase 6: Performance & Security
+- [x] Hero image `priority` + `sizes` (LCP fix: 5.3s → ~2.0s)
+- [x] Hero.tsx converted to Server Component (removed `"use client"`)
+- [x] Inter Tight migrated to `next/font` (eliminated 3 render-blocking Google Fonts requests)
+- [x] PostHog preconnect hint added
+- [x] Image `sizes` on AppShowcase + ValueProps components
+- [x] Blog images compressed (15.9MB → 1.1MB, PNGs converted to JPGs)
+- [x] Browserslist targeting modern browsers (drops legacy polyfills)
+- [x] WCAG AA contrast fixes (`--orange-dark`, `--green-dark` tokens, footer text)
+- [x] Image cache TTL (1 year for static screenshots)
+- [x] Security headers (CSP enforcing, X-Frame-Options, COOP, nosniff, Referrer-Policy)
+- [x] PostHog feature flags disabled (`advanced_disable_feature_flags`)
+- [ ] Real app screenshots (placeholders in place)
+- [ ] Real testimonials (when available)
+
 ---
 
 ## Quick Commands
@@ -295,6 +322,7 @@ vercel --prod
 - Auto-captures clicks, form submissions, page views
 - Custom event: `signup_cta_clicked` fires on all signup CTA clicks
 - Session recordings and heatmaps enabled via PostHog dashboard
+- Feature flags disabled (`advanced_disable_feature_flags: true`)
 - Config: `components/PostHogProvider.tsx`
 
 **Vercel Analytics:**
@@ -306,6 +334,22 @@ vercel --prod
 - `NEXT_PUBLIC_POSTHOG_KEY` — PostHog project API key
 - `NEXT_PUBLIC_POSTHOG_HOST` — PostHog ingest URL (`https://us.i.posthog.com`)
 - Set in `.env.local` (local) and Vercel Dashboard → Settings → Environment Variables (production)
+
+---
+
+## Security Headers
+
+Configured in `next.config.ts` `headers()`, applied to all routes:
+
+| Header | Value | Purpose |
+|--------|-------|---------|
+| `X-Frame-Options` | `DENY` | Prevents clickjacking |
+| `X-Content-Type-Options` | `nosniff` | Prevents MIME-type sniffing |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Controls referrer info |
+| `Cross-Origin-Opener-Policy` | `same-origin` | Isolates browsing context |
+| `Content-Security-Policy` | Enforcing | Restricts script/style/font/img/connect sources |
+
+**CSP allowed sources:** `'self'`, Cloudflare Insights, PostHog (`us.i.posthog.com`, `us-assets.i.posthog.com`). If adding new external scripts/services, update the CSP in `next.config.ts` or they will be blocked.
 
 ---
 

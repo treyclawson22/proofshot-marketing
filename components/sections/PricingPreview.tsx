@@ -74,7 +74,7 @@ export function PricingPreview() {
 
               {/* Billed As (for Annual) */}
               {plan.billedAs && (
-                <p className="text-sm text-green font-medium mb-2">
+                <p className="text-sm text-green-dark font-medium mb-2">
                   {plan.billedAs}
                 </p>
               )}
