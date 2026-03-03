@@ -16,6 +16,129 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "top-5-ways-to-get-customers-from-before-after-images",
+    title: "Top 5 Ways to Get Customers from Before & After Images",
+    excerpt:
+      "Before and after images are your secret weapon for winning new customers. Here's how to turn your project photos into a customer-generating machine.",
+    content: `
+# Top 5 Ways to Get Customers from Before & After Images
+
+Your before and after images aren't just proof of great work—they're one of the most powerful marketing tools in your arsenal. Here's how to turn those project photos into a steady stream of new customers.
+
+## 1. Create Scroll-Stopping Social Media Content
+
+Before and after images perform **300% better** on social media than regular posts. Here's why they work:
+
+- **Instant visual impact**: The transformation grabs attention in a crowded feed
+- **Proof without words**: People see the quality before reading anything
+- **Highly shareable**: Homeowners love sharing amazing transformations
+
+**Pro tip**: Use ProofShot Pro to create perfectly branded before/after comparisons in 30 seconds. Add your logo, contact info, and share directly to Instagram, Facebook, or LinkedIn.
+
+### Where to post:
+- **Instagram Stories & Reels** - Use the swipe feature for dramatic reveals
+- **Facebook business page** - Tag the location for local SEO boost
+- **LinkedIn** - Especially effective for commercial work
+- **Nextdoor** - Hyper-local targeting for neighborhood projects
+
+## 2. Build a Portfolio That Sells Itself
+
+Your website portfolio should do the selling for you while you sleep. Here's how:
+
+### Organize by project type
+Don't just dump all your photos in one gallery. Create separate sections:
+- Kitchen remodels
+- Bathroom renovations  
+- Exterior painting
+- Deck restoration
+- Landscape transformations
+
+### Tell the story
+Add brief context to each before/after:
+- What was the problem?
+- What solution did you provide?
+- How long did it take?
+- Approximate budget range (optional but builds trust)
+
+### Make it easy to contact you
+Put a "Get a Quote" button on every portfolio page. Don't make prospects hunt for your contact info.
+
+## 3. Leverage Google My Business
+
+This is the **#1 most overlooked** opportunity for contractors:
+
+- Post before/after images weekly to your Google Business Profile
+- Add detailed descriptions with relevant keywords
+- Encourage customers to leave reviews mentioning the transformation
+
+**Why it matters**: When someone searches "kitchen remodeler near me," your profile with stunning before/afters will stand out in the map pack.
+
+**Bonus**: Google loves fresh content. Regular photo updates can improve your local search ranking dramatically.
+
+## 4. Create Targeted Ads That Convert
+
+Before and after images make Facebook and Instagram ads **incredibly effective**. Here's the strategy:
+
+### Facebook/Instagram Ads:
+1. **Target by location**: Focus on zip codes where you want to work
+2. **Use carousel ads**: Show multiple transformations in one ad
+3. **Include a clear CTA**: "Get Your Free Estimate" or "Transform Your Home"
+4. **Retarget website visitors**: Show them specific before/afters related to pages they viewed
+
+**Budget tip**: Start with $10-15/day. A few quality leads can pay for months of ads.
+
+### Google Local Service Ads:
+Upload your best before/afters to build trust. Customers comparing multiple contractors will choose the one with visual proof every time.
+
+## 5. Turn Happy Customers Into Referral Machines
+
+Your best before and after images come from real customer projects. Here's how to maximize their referral potential:
+
+### Ask permission the right way:
+"We'd love to share your amazing transformation to help other homeowners see what's possible. Can we feature your project on our website and social media?"
+
+**Most people say yes** when:
+- You ask at project completion (when they're happiest)
+- You offer to tag/credit them (if they want)
+- You send them the final branded image to share themselves
+
+### Make sharing easy:
+Send customers a branded before/after of their project. Many will:
+- Post it on their own social media (free advertising!)
+- Show it to friends and neighbors (word-of-mouth referrals)
+- Leave it as part of their review (social proof)
+
+**ProofShot Pro makes this effortless**: Create a branded before/after in 30 seconds and send it directly to your customer. They'll appreciate the professional touch and you get free marketing.
+
+## Bonus: Consistency is Key
+
+The contractors who win with before/after marketing:
+- Capture photos on **every single project** (make it non-negotiable)
+- Post consistently (at least 2-3x per week minimum)
+- Keep branding uniform across all images (builds recognition)
+- Track which images get the most engagement (double down on what works)
+
+**The biggest mistake?** Taking great photos but never sharing them. Your before/afters only generate customers when people actually see them.
+
+## Ready to Turn Your Photos Into Customers?
+
+With ProofShot Pro, you can document every project, create scroll-stopping before/afters, and share them across all your marketing channels—all in less time than it takes to write an email.
+
+**Your next customer is looking at someone else's before and after images right now. Make sure they're looking at yours.**
+
+[Try ProofShot Pro Free](https://app.proofshotpro.com/signup) • [See Pricing](/pricing)
+    `,
+    category: "Marketing",
+    author: {
+      name: "ProofShot Pro Team",
+      role: "Marketing",
+    },
+    publishedAt: "2026-01-20",
+    readTime: "7 min read",
+    featured: false,
+    image: "/blog/before-after-marketing.jpg",
+  },
+  {
     slug: "how-to-take-better-before-after-photos",
     title: "How to Take Better Before & After Photos",
     excerpt:
