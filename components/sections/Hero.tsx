@@ -28,9 +28,9 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0 mb-8">
-              Before & after documentation for contractors who mean business.
+              <em>Before & after documentation for contractors who mean business.</em>
               <br className="hidden md:block" />
-              Combine, brand, share — in 30 seconds.
+              <em>Combine, brand, share — in 30 seconds.</em>
             </p>
 
             {/* CTAs */}
